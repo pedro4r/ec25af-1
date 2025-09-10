@@ -1,0 +1,1234 @@
+ui_print("Quectel FOTA Tools
+  Version
+     v3.5 : now update modem or boot, don't remove and link any files
+  Contact : <ramos.zhang@quectel.com>
+");
+mount("ubifs", "UBI", "system", "/system");
+usb_remount();
+ui_print("Verifying current system...");
+show_progress(0.100000, 0);
+assert(apply_patch_check("/system/bin/busybox", "7eafcb9cbe342b9bcb744fbde63e5d2a8194f9b4", "f23a6eb344049f16533016544016b8b8c677f13b"));
+set_progress(0.013290);
+assert(apply_patch_check("/system/bin/su.shadow", "e176e742c94aefc8e5f5992eaa525261d177451a", "825cf34853294b32a622af5c577f14347c71b10e"));
+set_progress(0.013789);
+assert(apply_patch_check("/system/data_swap/miniupnpd/miniupnpd.conf", "c0dfcc354c14dfb202e4355f304f0de985b7ab9e", "054a6bb62216673850bc27bc6dc2a0be616e35c8"));
+set_progress(0.013841);
+assert(apply_patch_check("/system/etc/init.d/misc-daemon", "14481f3c106b60fec9ed482a28810c681f3284e0", "2bcf271616979e3cd5420d0afabc3136e2250fe4"));
+set_progress(0.013863);
+assert(apply_patch_check("/system/etc/mdev/automountsdcard.sh", "f04bcbdd919344040be6281c66509ec521e8e3ab", "08f33030891a8fce371f56249728d0c78baa3b85"));
+set_progress(0.013883);
+assert(apply_patch_check("/system/firmware/image/Ver_Info.txt", "47f1a3aad135a817c65df49a2442aaaf947021a0", "142620e52a698be0a8155ab0ef57cd8dd8a0a064"));
+set_progress(0.013889);
+assert(apply_patch_check("/system/firmware/image/athwlan.bin", "f18cc1870da834f63e6e9b35f46f58e0494566a5", "10dfc472f64829412e3b0b1c9dfc1b6aaa31adc8"));
+set_progress(0.020320);
+assert(apply_patch_check("/system/firmware/image/mba.b01", "60e012c01f216a8aa63dedc6c235a73c171e7146", "443fc901031f69cdeb3a94787a655c96a7055df5"));
+set_progress(0.020390);
+assert(apply_patch_check("/system/firmware/image/mba.b04", "6d582e815e5a499d7f5665ec2cee07e4cff77344", "91ec263ea35cc8f1e826f447bd2be91b98eed563"));
+set_progress(0.020758);
+assert(apply_patch_check("/system/firmware/image/mba.mbn", "e540ee0117ad9a4e6547457b620c333e4cf0005c", "b62951d1294cb7888d82a36f59b3b49b48b9832d"));
+set_progress(0.023258);
+assert(apply_patch_check("/system/firmware/image/mba.mdt", "7cd076400263ae36d4c5c4bcc2cc0f3f7d77de54", "684301f6460c6218d10214d3c9869777c5bff1a4"));
+set_progress(0.023331);
+assert(apply_patch_check("/system/firmware/image/modem.b00", "11cbb60f243d1abed750cff9f6bdddc326e6587a", "bf7e557426546b85d6eb405bd157d7ca538fca6f"));
+set_progress(0.023339);
+assert(apply_patch_check("/system/firmware/image/modem.b01", "32641fdf53216bf116fc9bfcafb3647ba79de25f", "243a6ca6fc8931d8d14dea3de0c281a68fa989cf"));
+set_progress(0.023415);
+assert(apply_patch_check("/system/firmware/image/modem.b03", "6b77db9925a58cfb40d478cce1cf86379bf032ec", "45bbe4a31a4f5b9917fef6d2e11095c7ca92986d"));
+set_progress(0.023461);
+assert(apply_patch_check("/system/firmware/image/modem.b06", "6e58d8089c0e2296413f318f68d42910cd2a2f62", "33c9e109989a90cc1aa5768cd3305f4e8cea2f71"));
+set_progress(0.027694);
+assert(apply_patch_check("/system/firmware/image/modem.b07", "12807b1473e5ef47fdff255404e8cf0cb64e1ef9", "b442fa471451247126f5bddd4d38b3b841ab8adc"));
+set_progress(0.029909);
+assert(apply_patch_check("/system/firmware/image/modem.b08", "4ff2d1ec2b4e062173bbacd986842d5b3040176d", "314ac36e373d23e370e011adbfb513a5f73abdf9"));
+set_progress(0.037612);
+assert(apply_patch_check("/system/firmware/image/modem.b09", "18d45f9939149235878610c0ac2eb8e2ce2a011b", "cb418e5bca027aa14b3f88e744f1759f30186a72"));
+set_progress(0.055842);
+assert(apply_patch_check("/system/firmware/image/modem.b10", "4ff5a8f04e2c4b4c7875d8cf2470f4aaa09e73cd", "5edd44c45f1e170f0dd21cc798de0d8cc6a8813c"));
+set_progress(0.257758);
+assert(apply_patch_check("/system/firmware/image/modem.b12", "f10675fb1a0089fae36291f13402b7c29f130329", "590cf6551c09fd6a7ef328abca443c97c20d4252"));
+set_progress(0.322800);
+assert(apply_patch_check("/system/firmware/image/modem.b13", "e3b5ecbf78eb6b3c04cb774c3892806daea9b586", "d9baca2ba9d2fba454f1a1030473e6fd82367433"));
+set_progress(0.341498);
+assert(apply_patch_check("/system/firmware/image/modem.b17", "cf08a326a4fc97223feb7e9aab0dce4ac5d3cbeb", "d1c73779673fe350fc5e9865bd301d7b6a11b0d1"));
+set_progress(0.342366);
+assert(apply_patch_check("/system/firmware/image/modem.b19", "6044c01ce692d70e09180cad471bc9d329357799", "934a4b54a3be3ad4ea968d2fd2394120ff1c5aeb"));
+set_progress(0.452464);
+assert(apply_patch_check("/system/firmware/image/modem.b20", "ca2ce02a09987b6d380e7abcbd21978f32694af8", "58b9cea9b6de19c55b3f5c2dfb20079ee68ae550"));
+set_progress(0.453323);
+assert(apply_patch_check("/system/firmware/image/modem.b21", "3cee26ddd14b2d74d58d90b138a85a2274131f53", "2846ed1cb88174926dd7b4fb62bbfbec26c8e233"));
+set_progress(0.458819);
+assert(apply_patch_check("/system/firmware/image/modem.b22", "954803b06719a45c87482f4bda99924e120a16fe", "e9c9fbaaea823554a860c41e482336b6f8a8e10d"));
+set_progress(0.465598);
+assert(apply_patch_check("/system/firmware/image/modem.mdt", "0687be6fccce738100e9c0f83d71700e4fce33b3", "2c399394c16985ef9db70a385d9d30eaa85b7bea"));
+set_progress(0.465682);
+assert(apply_patch_check("/system/firmware/image/qca61x4.bin", "c334577266157f504ad38f4a6c9f25c9214268b1", "74fbfaed1f0e5b241acaaa3d866c63107eed8c20"));
+set_progress(0.476863);
+assert(apply_patch_check("/system/firmware/image/qwlan.bin", "f18cc1870da834f63e6e9b35f46f58e0494566a5", "10dfc472f64829412e3b0b1c9dfc1b6aaa31adc8"));
+set_progress(0.483293);
+assert(apply_patch_check("/system/firmware/image/qwlan30.bin", "f18cc1870da834f63e6e9b35f46f58e0494566a5", "10dfc472f64829412e3b0b1c9dfc1b6aaa31adc8"));
+set_progress(0.489724);
+assert(apply_patch_check("/system/firmware/image/utf.bin", "43078066212de541d3c6dcbdf5a906f3d9a4dd94", "727bf587d9fc2bf8e52a45bba778aa80d2ad189a"));
+set_progress(0.493947);
+assert(apply_patch_check("/system/firmware/image/utf30.bin", "43078066212de541d3c6dcbdf5a906f3d9a4dd94", "727bf587d9fc2bf8e52a45bba778aa80d2ad189a"));
+set_progress(0.498171);
+assert(apply_patch_check("/system/lib/libavcodec.so.55.69.100", "6717c13444a024ed8969691b4b564e3679529420", "13e3d58142a030cdc53a866635fb3aaf7e346162"));
+set_progress(0.514658);
+assert(apply_patch_check("/system/lib/libavformat.so.55.48.100", "79a9b0378a99d4b5c3cc4766b46468729eae7e7c", "bd14f7fb866f73a4219af18acd7a331e4ae982b4"));
+set_progress(0.521016);
+assert(apply_patch_check("/system/lib/libavutil.so.52.92.100", "5f7527b552444e988458e9dae9bd5974afb6fb1c", "2864a4239bc90bf8be98a9ace259c13ef545baa2"));
+set_progress(0.522882);
+assert(apply_patch_check("/system/lib/libcrypto.so.1.0.0", "6e69eac26a7baf142ee59bbbde7f4853fc12d37c", "6795fd0c6b6b9976ab25854bd0d0a3de86c8f461"));
+set_progress(0.541917);
+assert(apply_patch_check("/system/lib/libnss_mdns.so.2", "a54f737b998e4ef0d1a992f1e1731c674c33d519", "c32652ba3a1738bd8e81e29bdcab4db5fc766cd7"));
+set_progress(0.542018);
+assert(apply_patch_check("/system/lib/libnss_mdns4.so.2", "90b7d5a69ecd13a39404b8a7285ad2366f5302b6", "be43cfb4bb9879127cc93dd25676a455354ba317"));
+set_progress(0.542120);
+assert(apply_patch_check("/system/lib/libnss_mdns4_minimal.so.2", "c0fc06044dc1c0f8b3c06f3eb3b63b18a6c223f6", "905d0c78d20193735344994bf31f80d86250c344"));
+set_progress(0.542221);
+assert(apply_patch_check("/system/lib/libnss_mdns6.so.2", "5583e1f4545a69181a08a2e21b8f5ac605313f20", "4954000f4ea9f6c999d68e6599b59ee36dc9d794"));
+set_progress(0.542323);
+assert(apply_patch_check("/system/lib/libnss_mdns6_minimal.so.2", "998753c7339ecae234134c517150526111cd40a9", "13db89ea6448f10a921c5bf4e4fc3ad4c9af21dc"));
+set_progress(0.542424);
+assert(apply_patch_check("/system/lib/libnss_mdns_minimal.so.2", "2e758309c0c61c45ed33b314cda8aeb7b79c4813", "148d8cce83465d2f7af09f551cfc422692ba84bc"));
+set_progress(0.542526);
+assert(apply_patch_check("/system/usr/bin/alsaucm_test", "2897c37307fc8857988d1f219a3f585fb35f87bb", "50bc23d887aebaa9d4aadc6ba5a69cd224896164"));
+set_progress(0.542761);
+assert(apply_patch_check("/system/usr/bin/atfwd_daemon", "1c32381e64c869e07f024c0b3a47c4cd9937a15f", "b0dc6929e9a71ac3d9cffe0e2415aa39a0c720c3"));
+set_progress(0.548303);
+assert(apply_patch_check("/system/usr/bin/avahi-browse", "4af80fe0c6fe4baaf1a99584f775ed4a1843ca10", "75b36cd916bf92ec464ca39adea0ab32f15c0dbe"));
+set_progress(0.548535);
+assert(apply_patch_check("/system/usr/bin/avahi-publish", "cf842b65b6b9b9035e4496dc596a09ef2902f2f3", "0d2151bc62ce8f26a7761035c740d842afa6c3cc"));
+set_progress(0.548725);
+assert(apply_patch_check("/system/usr/bin/avahi-resolve", "952f82c3402e05e332d924f9822ae93d4dfe0b42", "f0719d5c30ad06d8244e88406731ebdd1103db82"));
+set_progress(0.548872);
+assert(apply_patch_check("/system/usr/bin/avahi-set-host-name", "f5f7529f439f5bfb1753a9d36c63b6b8a8987ab3", "77dfc9dedb9dc0b74421150ff27048cb9484133b"));
+set_progress(0.549019);
+assert(apply_patch_check("/system/usr/bin/bashbug", "557883bf4018790edb23798891d3298cce71962b", "9fcd2c3cba91aab2bec7e6f20e2c60f9c70b8f39"));
+set_progress(0.549098);
+assert(apply_patch_check("/system/usr/bin/crasher", "31e18c8428f3e26a448b2fc07c82e32b50236e6f", "52808f006d0fa61bc24fe25fa632a1ab7dc509cf"));
+set_progress(0.549201);
+assert(apply_patch_check("/system/usr/bin/dbus-daemon", "cab617c786799e02ebfc31c2edeb3abc52b9cb4d", "6a5afd6e14bdb688deb07e9f8bddd9c2da058d2a"));
+set_progress(0.553215);
+assert(apply_patch_check("/system/usr/bin/dbus-run-session", "34361f96506d60ae05bfd3e1bd94e2345fcebea3", "eccc24f243c1bc58b7aefadafc564e07f73be49d"));
+set_progress(0.553318);
+assert(apply_patch_check("/system/usr/bin/dumpkeys", "0d5f3e091d5665c1b62a05f6098b0c8b99d26ac3", "6fdeb7c3e8e08307436a935a9b1711ca1fbe2b54"));
+set_progress(0.554369);
+assert(apply_patch_check("/system/usr/bin/ffprobe", "7ea3110b416092976a1afaa837b8006611077fab", "dc1677d1d45519848379b5dac1e4dbc5f713f045"));
+set_progress(0.555312);
+assert(apply_patch_check("/system/usr/bin/groups.shadow", "8bc8e69c1350c0b084c88fd96706eb2e1cb26acf", "af4792fb0ece31d83851f827ffefbd6513b8b696"));
+set_progress(0.555415);
+assert(apply_patch_check("/system/usr/bin/loadkeys", "4eae26fd697916928a88f9ac16d2da9ef73e82c3", "552dc6ec88e00511faa35d70fff23285436292d3"));
+set_progress(0.556854);
+assert(apply_patch_check("/system/usr/bin/mbimd", "26f72e26f371a4ab42f28c858ac0553af474a8a3", "5d9be133ef99fe0abfa1f1f8eefbd80bb142b4a9"));
+set_progress(0.563964);
+assert(apply_patch_check("/system/usr/bin/mcm_ril_service", "57ee1a43c2ef564bce9fe0fb443232d90737475b", "1e9bcb9812e7cb5331fb3ff3db07979360c134b3"));
+set_progress(0.571221);
+assert(apply_patch_check("/system/usr/bin/monitor_modem.sh", "007b8e477989bfe3ed7678e2a37cdb12156648a5", "2bb2c2e3dd499c2a7d87e3b3798283fd5fe44725"));
+set_progress(0.571237);
+assert(apply_patch_check("/system/usr/bin/netmgrd", "3ee166916eb97d82ca026e0087455d2c10e0909f", "7b79af59c8aeea2f55fbe16418eb3079e20fad04"));
+set_progress(0.577751);
+assert(apply_patch_check("/system/usr/bin/newgrp.shadow", "d19a50a2ba5e58eca873206f45fc08e1829fa0d4", "d5b1ec572db8af8341a0b811c2f68d6a818f8f5c"));
+set_progress(0.578033);
+assert(apply_patch_check("/system/usr/bin/ql_fota_dl", "4520ac99c4c038f9a875a8d32260dd2d3fa88bac", "56e3fb02cf9235d20a3ab0068f533dd0ebeb2e8b"));
+set_progress(0.578310);
+assert(apply_patch_check("/system/usr/bin/ql_manager_server", "49b30eea7acedbc91012fd092c93378773141bd6", "58e3cd4fe9097c95d60ba93e705ac13fbc04397a"));
+set_progress(0.580568);
+assert(apply_patch_check("/system/usr/bin/qmi_shutdown_modem", "12b844ee41a548e417c8eed85785a1399ed2637e", "808f5a88ec7c42f7cfe6aa416994857499085360"));
+set_progress(0.580714);
+assert(apply_patch_check("/system/usr/bin/qti", "86f5cb9bd7c109176506e664e528a7db3ef2dd49", "1e78d23e70cd1f14d512406b6434069a07d06e02"));
+set_progress(0.582390);
+assert(apply_patch_check("/system/usr/bin/quectel-remotefs-service", "f21fe8151b5256ddeaf0c1932a928a9920a50fa2", "cbbceb8eba8ca9a67229955cfb315bf5b23e66c4"));
+set_progress(0.582622);
+assert(apply_patch_check("/system/usr/bin/quectel-uart-ddp", "a4287fa9068c0633de6ca572718112f6bffda4f0", "730108c53eb068b70a819d74108740cc367c31e3"));
+set_progress(0.582856);
+assert(apply_patch_check("/system/usr/bin/quectel_ble_service", "0e07b3b2be82600e5a32f057c38416f68f25e3a7", "5f2329237a5d6f7f7df6172872f4badea23fd9ce"));
+set_progress(0.626786);
+assert(apply_patch_check("/system/usr/bin/quectel_daemon", "bab005c16ac3f5dd087bf0a9989cf8af7c3adabd", "a49c5d7282aad807af6faf2bdcaba4d4b3782c7e"));
+set_progress(0.627498);
+assert(apply_patch_check("/system/usr/bin/test_binder", "9efc49219d228bc538afa97893185a12b2f29245", "4abaadd81a7a6f80477cd4d23e189603ad9f25ed"));
+set_progress(0.627817);
+assert(apply_patch_check("/system/usr/bin/thermal-engine", "fb4f23b43a9d1b04762b7b2270e7dea6b929882e", "15c0cbf20207b9c6f7967d0cbc7f4302500a4ec4"));
+set_progress(0.665937);
+assert(apply_patch_check("/system/usr/bin/unzip", "ef02f1eb8d686c8f4c8d13939d7152fe277ced1b", "e29228fd1ec409eb4a7adac0b7532b24ed5c24c0"));
+set_progress(0.667587);
+assert(apply_patch_check("/system/usr/bin/xmllint", "7a0ba13591356715c2a62e1e0f5d691e516de4d1", "89b3468b74b18dab63f1b33ea62eec54fb3aafbd"));
+set_progress(0.668252);
+assert(apply_patch_check("/system/usr/bin/zipinfo", "ef02f1eb8d686c8f4c8d13939d7152fe277ced1b", "e29228fd1ec409eb4a7adac0b7532b24ed5c24c0"));
+set_progress(0.669903);
+assert(apply_patch_check("/system/usr/lib/audio_primary_default.so", "b2c2f39e714fb52acf9ec3da4985a54d000dd781", "5a6358d9319d1139dcd60541df22487098040f6a"));
+set_progress(0.673049);
+assert(apply_patch_check("/system/usr/lib/dbus/dbus-daemon-launch-helper", "30a522fef91752eff10d384cf3c09668373f9a83", "e477c6ad74b3d1dd1f999d55ef1fd273076c2ecd"));
+set_progress(0.675860);
+assert(apply_patch_check("/system/usr/lib/libacdbloader.so", "f40204a62043e1390a9ee0e1f7174a0377ec0592", "f7105068029f2af7328814fbf6079f3697bd000a"));
+set_progress(0.676964);
+assert(apply_patch_check("/system/usr/lib/libasound.so.2.0.0", "5254414006504117b6fde7ffd250f40964f67291", "3f53f60d428a3fb7636d6da11893e4ee207efa20"));
+set_progress(0.686226);
+assert(apply_patch_check("/system/usr/lib/libavahi-client.so.3.2.9", "0d613159e25aeff904d936bd59d6c874f0e3891b", "ebe16f8c2d2d57a3adbb3b698715f992a16633ae"));
+set_progress(0.686888);
+assert(apply_patch_check("/system/usr/lib/libavahi-common.so.3.5.3", "ff835f218dd63264dbe6dd094fcc5cfd9b2677c1", "b28d48b35f4b82499d5eb790f5386793c2bfb0f3"));
+set_progress(0.687379);
+assert(apply_patch_check("/system/usr/lib/libavahi-core.so.7.0.2", "72a89d6c9564608e7501d07f1d3ef65510fe2f0b", "8eee510ec71ba9f6ca84db77c60caf66d26c309e"));
+set_progress(0.689672);
+assert(apply_patch_check("/system/usr/lib/libavahi-glib.so.1.0.2", "8e518a136163f7ff18899f39a165e0bfe09f7806", "063fbf0e271b96c88fc36a3a2dcc54853a782e5b"));
+set_progress(0.689818);
+assert(apply_patch_check("/system/usr/lib/libbase.so.0.0.0", "af1df7b6c24758e21143a72b54e42b6e3cbea470", "bb9ce12d01de71ec2a25076680b0460131601998"));
+set_progress(0.690094);
+assert(apply_patch_check("/system/usr/lib/libcamera_metadata.so.0.0.0", "01c6aaa92c5ea1a6fcb651b84ade77002966b9a7", "c9b3bf1741fd6eccb7005110fb440a7463af6612"));
+set_progress(0.690476);
+assert(apply_patch_check("/system/usr/lib/libcutils.so.0.0.0", "9d44cbb7ccc122bc583b014ab179c984f270124b", "0a0a72b90021e867af31a78573dd97f8dcef5327"));
+set_progress(0.691009);
+assert(apply_patch_check("/system/usr/lib/libdaemon.so.0.5.0", "ef981b3fc7a58a4e93ca55f9ef9e987bf0f4434e", "651f74a2e5ae9b2a0a9922ff8d8a350c891f3dd1"));
+set_progress(0.691240);
+assert(apply_patch_check("/system/usr/lib/libdbus-1.so.3.8.13", "b5d6bc935a0d2f4cff8383ca6af442585fecac97", "2ec75e818cfa68d736f3724484a75fd66e8cb25f"));
+set_progress(0.693963);
+assert(apply_patch_check("/system/usr/lib/libexpat.so.1.6.0", "409df0c28f7cecc1f625a484294bc54bc086d2f5", "352d476401c0b5cc7ea9ed7936fef88f24488a47"));
+set_progress(0.695483);
+assert(apply_patch_check("/system/usr/lib/libext4_utils.so.0.0.0", "42e9d7fcd8c4c1a2115fbfed86f69ef9bff53a5b", "1700f953c93d5409f0ac57fb2357038c5e975b1a"));
+set_progress(0.696273);
+assert(apply_patch_check("/system/usr/lib/libgio-2.0.so.0.4400.1", "05b29a34c9e117348da51102c29b6c77dae0c5f7", "6979d21e66150de0284d03d8daab4f180fb3302b"));
+set_progress(0.710681);
+assert(apply_patch_check("/system/usr/lib/libglib-2.0.so.0.4400.1", "b4011a7673c516eb4e5f3646af70ad2d8bc7900b", "9c2c60ec9f04d284d5cb9b27552d9986587fc852"));
+set_progress(0.723289);
+assert(apply_patch_check("/system/usr/lib/libgmp.so.10.2.0", "5f4c14ea664d1e00fe02d917e1111d9e4af52abd", "7a23548e9d4bc56e25bd65a948cb47574b28f4ab"));
+set_progress(0.728159);
+assert(apply_patch_check("/system/usr/lib/libgnutls.so.28.41.9", "59e0ac057dcebc6389e130fc19501f4476a98a6b", "799c434b779fb2f16e44c3be5da1314f8bf72b03"));
+set_progress(0.739910);
+assert(apply_patch_check("/system/usr/lib/libgobject-2.0.so.0.4400.1", "a685eea5faedea44326d6668c12aaae22133bea2", "7f6d28c218eec9ef9425460202b1ad9ccc848687"));
+set_progress(0.742849);
+assert(apply_patch_check("/system/usr/lib/libgthread-2.0.so.0.4400.1", "4ce77dd510d14fcc113608078deec9813d9beb0a", "81adaf768d26d7fb68adeff447d04a721cd5ec4a"));
+set_progress(0.742908);
+assert(apply_patch_check("/system/usr/lib/libhogweed.so.4.1", "4a4b8acc108a52ddfd8b86ff72906bfbf22219f2", "eaa0465935ac1e2088596c55fd35c9a51067fbe3"));
+set_progress(0.744814);
+assert(apply_patch_check("/system/usr/lib/libid3tag.so.0.3.0", "f7672c49f0f70583fd78088aa4ef7ee56a667096", "69a68bcaf0d46c93a9d9795269e840dc1c0081da"));
+set_progress(0.745818);
+assert(apply_patch_check("/system/usr/lib/libmincrypt.so.0.0.0", "f8ea0fbb85ec228275abbad9ea65cfd1d04e2943", "bd784f2d97fcd9be8040632f524c762237b12fbb"));
+set_progress(0.746178);
+assert(apply_patch_check("/system/usr/lib/libnetfilter_conntrack.so.3.1.3", "c76e9b16151f09bc4e29d85534d21b0e1ce84c61", "5f52e82d8c6da3d6975ab9a049d1b4476ba6c969"));
+set_progress(0.746835);
+assert(apply_patch_check("/system/usr/lib/libnetmgr.so.0.0.0", "76dc9a8d650ccc3eaa713561f99c6a52831bb530", "79781100e130f3ccc80c2ab42d211d48b82a5cdc"));
+set_progress(0.747968);
+assert(apply_patch_check("/system/usr/lib/libnettle.so.6.1", "4182cac5165fbba790cdd4460a41937891273b45", "baac22a37c5bd167e7ba90976ddca4426397d5a9"));
+set_progress(0.750476);
+assert(apply_patch_check("/system/usr/lib/libnfnetlink.so.0.2.0", "f4401e95f531f6fde5e1bb95b7b64bb75552a03a", "74ad3614775bd00e096ce069316a4af3a7e6019f"));
+set_progress(0.750745);
+assert(apply_patch_check("/system/usr/lib/libnl-3.so.200.20.0", "ce08cd7393a25f0afa1d5f3913c7ba9153868a89", "0a73420cfe35d0eaef891c0e70cdf92cda080996"));
+set_progress(0.751794);
+assert(apply_patch_check("/system/usr/lib/libnl-genl-3.so.200.20.0", "d2aea9d9406db8154ffb981fc4b9b05ac643ce31", "acbb5e7003851473fe3791619349051cfaaf9d16"));
+set_progress(0.751986);
+assert(apply_patch_check("/system/usr/lib/libnl-nf-3.so.200.20.0", "ce51bd730554ba17d9f9df51a56e5264875f0215", "594a9069560fbf7fc9aa0261891c175d16695da1"));
+set_progress(0.752753);
+assert(apply_patch_check("/system/usr/lib/libnl-route-3.so.200.20.0", "9cef1fa254daf68c581b4a655e564844b60d61aa", "edf01571d5189a257f0f4279d1866cc50b816ff3"));
+set_progress(0.756101);
+assert(apply_patch_check("/system/usr/lib/libperl.so.5.22.0", "8270213fa296b3a2509160780123aed6cf421647", "036c7f37863f98619d058dec7c7b5c3a4876f9ba"));
+set_progress(0.773673);
+assert(apply_patch_check("/system/usr/lib/libpugixml.so.1.0.0", "9061b00a13b33035aaf10e758a8c78d4956ff08c", "46b02fd6cf8d8267b6ece3a3025875946e583e62"));
+set_progress(0.775323);
+assert(apply_patch_check("/system/usr/lib/libqahw.so", "44de82af59096985c823e7afb513f48a09ec8714", "c81aded2b58bdaa70c0269d3e0900dfd219ec03d"));
+set_progress(0.775813);
+assert(apply_patch_check("/system/usr/lib/libql_rawdata.so.1.0.0", "79dab3cbe391931ee9373a6b76621d204cecae29", "efbd577184c8c51ce79e140515cf376712e81b1b"));
+set_progress(0.775915);
+assert(apply_patch_check("/system/usr/lib/libqmiservices.so.1.0.0", "f6bda6026d54cfe1657f73bdd09182d6bcb16464", "b567ff20abb54e5c260afccb36c292db997930ca"));
+set_progress(0.777066);
+assert(apply_patch_check("/system/usr/lib/libsensors.so.1.0.0", "01c9b92a9d5f3d51932a03e6c98939e39b7d22ed", "6693f80f5a1b1b65b92ee2c07f2c25c7a54df3d6"));
+set_progress(0.777957);
+assert(apply_patch_check("/system/usr/lib/libsparse.so.0.0.0", "8a59eb099a12ec3e40faa26785aaedb5d5a655a4", "24e3ca572d65d4e128233a457a9947c63ac69f7d"));
+set_progress(0.778232);
+assert(apply_patch_check("/system/usr/lib/libstdc++.so.6.0.20", "1cbbd3ae592947907a6e700f931f5c6532b8d1d5", "03a58fbca29de6be5bbc7020632cdaf28028b3d6"));
+set_progress(0.787572);
+assert(apply_patch_check("/system/usr/lib/libutils.so.0.0.0", "8fd663b1d21a43e4c00ad490e1c5a641c13d3335", "9c370512377a5913349bc36d175860aab0189c86"));
+set_progress(0.788449);
+assert(apply_patch_check("/system/usr/lib/libxml2.so.2.9.2", "22da927366e0c5798685adb33d7bd3c8f400e2fa", "6f3ba2f5874e0b71bb6ffffa6a0f1c90dc3526f2"));
+set_progress(0.804209);
+assert(apply_patch_check("/system/usr/lib/modules/3.18.44/extra/embms_kernel.ko", "825d8eeab8a1430eb7358eaa04e46f78f8f5212f", "c42df42c36f1a9610db801149af07ee51ad4e9a2"));
+set_progress(0.804314);
+assert(apply_patch_check("/system/usr/lib/modules/3.18.44/extra/rtl8189es.ko", "40a560f44e6e6cc4b520d6cf6358cacd3f7999f1", "4a507f53454b82e501f10dc3b56cb327e834acb2"));
+set_progress(0.814458);
+assert(apply_patch_check("/system/usr/lib/modules/3.18.44/extra/shortcut-fe-cm.ko", "5f7c9683c900d4f6ff5aa4673768a33b5a5231fb", "0937276a07068966d9616b6a839439316b91cdcc"));
+set_progress(0.814604);
+assert(apply_patch_check("/system/usr/lib/modules/3.18.44/extra/shortcut-fe-ipv6.ko", "97e278ffef8125b1130ea51f54699549203be648", "a5298bd535091e84dd0d6aa5201a2944e35ecab0"));
+set_progress(0.815162);
+assert(apply_patch_check("/system/usr/lib/modules/3.18.44/extra/shortcut-fe.ko", "881d4233b3d33df2117578221a4af5c2fe3e5629", "cb0c9e8d21097d5b9624cd1e970c7ab48e693f86"));
+set_progress(0.815714);
+assert(apply_patch_check("/system/usr/lib/modules/3.18.44/extra/wlan.ko", "8c61d846164ab2d4971d7be6c530d4130519646f", "3e8d6341af3dcc1b4301285cd1a0336407be4219"));
+set_progress(0.860159);
+assert(apply_patch_check("/system/usr/lib/modules/3.18.44/kernel/block/test-iosched.ko", "6b3ba87c443a2b6362b4727902dd782f4e81c016", "7dc11748d7ba9f0f4fc2bf474595d62c7fc68520"));
+set_progress(0.861935);
+assert(apply_patch_check("/system/usr/lib/modules/3.18.44/kernel/crypto/ansi_cprng.ko", "6291826b163ca82a9afd9e97a1e25772a4b9bb46", "9ae490e06594717acceb02d989b1ee173518ec80"));
+set_progress(0.863274);
+assert(apply_patch_check("/system/usr/lib/modules/3.18.44/kernel/drivers/input/misc/gpio_axis.ko", "2125c938a439df71365833a2aa363de62fd2a3c6", "13bcc36bb11e921561c3b4529911b2b8e2e4e09d"));
+set_progress(0.864438);
+assert(apply_patch_check("/system/usr/lib/modules/3.18.44/kernel/drivers/input/misc/gpio_event.ko", "21c7aaea7b0f68e18fcc007d4171496e8e44d00e", "c562fcae321ddc0b1e6bd6b8a7dbaeee28f67b02"));
+set_progress(0.865605);
+assert(apply_patch_check("/system/usr/lib/modules/3.18.44/kernel/drivers/input/misc/gpio_input.ko", "b2e4265b3061e5e16aef55e6710c7a1ee4b6912d", "a2b53606b8a6110d05a51fba03230ce735cf89c2"));
+set_progress(0.866843);
+assert(apply_patch_check("/system/usr/lib/modules/3.18.44/kernel/drivers/input/misc/gpio_matrix.ko", "2b5310bf8dacc3bd41dd58a49df373f2f5e01999", "5bb9da998b5479730ce4b04b01f5bb134c1b244d"));
+set_progress(0.868102);
+assert(apply_patch_check("/system/usr/lib/modules/3.18.44/kernel/drivers/input/misc/gpio_output.ko", "37255318b220155e21e9c6262d56be2b794e9f0c", "57e69d5415054c2c920221be3a86ba81c60e720b"));
+set_progress(0.868986);
+assert(apply_patch_check("/system/usr/lib/modules/3.18.44/kernel/drivers/mmc/card/mmc_block_test.ko", "5c09cb1bb289b6b5ebaf0186e47d7b96b5e67239", "1e243bf4b8475cf7561b0a7319e65b43c41e97ce"));
+set_progress(0.871416);
+assert(apply_patch_check("/system/usr/lib/modules/3.18.44/kernel/drivers/mmc/card/mmc_test.ko", "10c866c3fac38c7957885098d239ba3f7720cc29", "ee512e584496345ed370e0a2fd3cd6d3e5f968f0"));
+set_progress(0.873762);
+assert(apply_patch_check("/system/usr/lib/modules/3.18.44/kernel/drivers/net/ethernet/qualcomm/emac/qcom_emac.ko", "d2388cfc3d15b2e39617894e45af1fa024551796", "481e4372089ea9b64c04ae9487a49785ad9a80d9"));
+set_progress(0.886963);
+assert(apply_patch_check("/system/usr/lib/modules/3.18.44/kernel/drivers/net/nf_conntrack_rtsp.ko", "4178a6dc6b9170a9785ab361fdd3ad65ed86d5dc", "28b2a9738874470b5030bce874e19132dbccbfa4"));
+set_progress(0.889118);
+assert(apply_patch_check("/system/usr/lib/modules/3.18.44/kernel/drivers/net/nf_nat_rtsp.ko", "12cf4815f67f7500c27dbd45094ca35ff2db4642", "9ea7ae2323b7e76d107000767cfb18bdd39fc848"));
+set_progress(0.891191);
+assert(apply_patch_check("/system/usr/lib/modules/3.18.44/kernel/drivers/net/phy/at803x.ko", "41b2b266e0db9805fa806ffd418c840e81970387", "c8cff3716b2474e896a84287cc8723e8498894f5"));
+set_progress(0.892906);
+assert(apply_patch_check("/system/usr/lib/modules/3.18.44/kernel/drivers/net/phy/libphy.ko", "90ef1e00edfa5ddabbbb6f77b9d6babfc5a93f40", "835ebb14e9691649cf883f8dd9b9d70d66db531c"));
+set_progress(0.898263);
+assert(apply_patch_check("/system/usr/lib/modules/3.18.44/kernel/drivers/net/phy/qca8337.ko", "c54d738cd837513269cac453aad515ac00ac0827", "5cc7479d24dc065de39b2415bf45aff9d1106314"));
+set_progress(0.900050);
+assert(apply_patch_check("/system/usr/lib/modules/3.18.44/kernel/drivers/of/of_mdio.ko", "e0fcd36ae899e84054d64eca5d1d818fa97917fc", "ce668468c99e709b207e69155b9ba52321769123"));
+set_progress(0.901719);
+assert(apply_patch_check("/system/usr/lib/modules/3.18.44/kernel/drivers/quectel-drivers/ql_lpm/ql_lpm.ko", "a18700dc6802a89ab4a57395fc2234f74147d2a3", "369a24e990d30c40ea2d901e63da3bc0a3f5296b"));
+set_progress(0.903636);
+assert(apply_patch_check("/system/usr/lib/modules/3.18.44/kernel/drivers/spi/spidev.ko", "a98c08f4ff4a5a977a1ac7f877fc9c4620e3e42b", "b9e944b71f92b1c4072927b8268898c52865b1c1"));
+set_progress(0.905216);
+assert(apply_patch_check("/system/usr/lib/modules/3.18.44/kernel/net/netfilter/xt_physdev.ko", "2fcc5bc8a1403a92954454dce34aad7c3124c202", "8acf53eb5e51433ffd8872c8c32050828894a29d"));
+set_progress(0.907016);
+assert(apply_patch_check("/system/usr/lib/modules/3.18.44/modules.alias", "c8a767bcb6a75a7adb9ad535dcde878263c5c48b", "91ee4eb3a82ff1596a4173b3443c7bb02cf35460"));
+set_progress(0.907039);
+assert(apply_patch_check("/system/usr/lib/modules/3.18.44/modules.alias.bin", "690746d58f8d8d170d7a8fc63b03590d1ba6add3", "f1d4a60b4557f5cefdba44448d7d109029f9b516"));
+set_progress(0.907061);
+assert(apply_patch_check("/system/usr/lib/modules/3.18.44/modules.builtin", "b05a3b41a5f2efc856d16c1c2583c8c0b20de01a", "47b5b0910f173b2fc55c8bb7fff8c90ec5057c53"));
+set_progress(0.907198);
+assert(apply_patch_check("/system/usr/lib/modules/3.18.44/modules.builtin.bin", "092fe36749003be431b8e20283300d10e0dde9e2", "43b5e8a78b9a5925f4eb3b9268fef243f7132b07"));
+set_progress(0.907352);
+assert(apply_patch_check("/system/usr/lib/modules/3.18.44/modules.dep", "6f3cc45052ac1f17c58ca75904f9ff16e707e6fb", "3805133493f547c71e86e5c486f4f6727ee8211e"));
+set_progress(0.907364);
+assert(apply_patch_check("/system/usr/lib/modules/3.18.44/modules.dep.bin", "cf52fee2eaab87b9bfb7cbaf634cdb4cd7fe0831", "84dbb7416e58ddba7060771493ab14f97ad7cf05"));
+set_progress(0.907386);
+assert(apply_patch_check("/system/usr/lib/modules/3.18.44/modules.order", "459a1d4e5291d0a732d551297a1c31378e2025eb", "9de43533770a2da8958c585bf477b765cd0d06cd"));
+set_progress(0.907392);
+assert(apply_patch_check("/system/usr/lib/modules/3.18.44/modules.symbols.bin", "5fc4f2c4b418b64e8caa5c7802a6977bb02c4a9b", "69191ce335912b1249df08fd18d3755026cd34a0"));
+set_progress(0.907445);
+assert(apply_patch_check("/system/usr/mbn/NA/ATT/VoLTE/mcfg_sw.mbn", "1bc9d4bdf023ba1ac2407ad3c82ab50138caf9bb", "7149e6df90bf64d50fa6ea41cf694ae9f2aa8482"));
+set_progress(0.907824);
+assert(apply_patch_check("/system/usr/mbn/NA/TMO/Commercial_VoLTE/mcfg_sw.mbn", "639ac4be6a5c688596a0d03fcefed52d3a55c462", "5f2926bbacc922e0bce4d0a883a62b3371355b48"));
+set_progress(0.908215);
+assert(apply_patch_check("/system/usr/mbn/NA/Verizon/hVoLTE/mcfg_sw.mbn", "5b27fc2dc4656e52adcb99c0cc522ec2bd761f24", "a665259c36e526ce032982adb90219edca7915c4"));
+set_progress(0.908790);
+assert(apply_patch_check("/system/usr/mbn/common/ROW/Gen_3GPP/mcfg_sw.mbn", "80a96c35a923c5fcfbc33a6c0aa0a5edc32f6555", "e89b8ab256216d08c65716652b3fb251b22b32d3"));
+set_progress(0.909074);
+assert(apply_patch_check("/system/usr/sbin/avahi-autoipd", "9c927fe6c48ce3b07e91b0572b3e44b98f2a4aa4", "6f515acaa9ecec72196dcac8457e0bfec92688c6"));
+set_progress(0.909436);
+assert(apply_patch_check("/system/usr/sbin/avahi-daemon", "f8d05603af1fcfa3c14f3af3ed93daf56c5d3101", "66e2ecf1c11a9b9160a26f4ff60b9599ac170bbd"));
+set_progress(0.910787);
+assert(apply_patch_check("/system/usr/sbin/avahi-dnsconfd", "4fb10896c7d40e706c5ffc8d19f7bdb5089745e0", "66e572c57c03087b7d924395ebf324e489c9bdc6"));
+set_progress(0.910977);
+assert(apply_patch_check("/system/usr/sbin/hostapd", "8172d19a0450f66f3e939a2895a48adbc451ae4f", "94b3bd6fd43b140f6c03feb5df42f131a5cace94"));
+set_progress(0.918399);
+assert(apply_patch_check("/system/usr/sbin/wpa_supplicant", "ebb032f69bd4afa6f42bf92be0dd5bf190146a87", "c96823bc2f2214f439d45fb2addb20ae5d95a6c0"));
+set_progress(0.934796);
+assert(apply_patch_check("MTD:boot:6219776:6d49ac82fac5c3f01c9b0205d8368b7139c5fd72:5421056:ebb3a35eb5c76da5b0ee3c1c288d8a2e95bf32c3"));
+set_progress(1.000000);
+
+# ---- start making changes here ----
+
+ui_print("Removing unneeded files...");
+delete("/system/bin/mountpoint.sysvinit", "/system/etc/General_cal.acdb",
+       "/system/etc/Global_cal.acdb", "/system/etc/Handset_cal.acdb",
+       "/system/etc/Hdmi_cal.acdb", "/system/etc/Headset_cal.acdb",
+       "/system/etc/gps.conf", "/system/etc/host.conf",
+       "/system/etc/inetd.conf", "/system/etc/init.d/find_partitions.sh",
+       "/system/etc/init.d/quectel_slic_daemon",
+       "/system/etc/init.d/start_ql_filter", "/system/etc/issue.net",
+       "/system/etc/mdev.conf", "/system/etc/nsswitch.conf",
+       "/system/etc/pimd.conf", "/system/etc/qmi_ip_cfg.xml",
+       "/system/etc/shadow", "/system/etc/sysctl.conf",
+       "/system/etc/syslog.conf.busybox",
+       "/system/firmware/image/bdwlan_fc21.bin",
+       "/system/firmware/image/bdwlan_fc21.md5",
+       "/system/lib/libncurses.so.5.9", "/system/sbin/powerapp",
+       "/system/sbin/sys_reboot", "/system/sbin/sys_shutdown",
+       "/system/sbin/usb/compositions/9025", "/system/usr/bin/dnsmasqMonitor",
+       "/system/usr/bin/ql_filter_set.sh",
+       "/system/usr/bin/quectel_slic_daemon",
+       "/system/usr/fota_ip_a/mgmtree.tre",
+       "/system/usr/lib/libql_fota.so.0.0.0",
+       "/system/usr/lib/modules/3.18.44/kernel/drivers/spi/le9641/",
+       "/system/usr/lib/modules/3.18.44/kernel/drivers/spi/le9641/spi-le9641.ko",
+       "/system/usr/sbin/iftop", "/system/build.prop", "/system/etc/issue",
+       "/system/etc/quectel-project-subversion",
+       "/system/etc/quectel-project-version", "/system/etc/timestamp",
+       "/system/etc/version", "/system/firmware/image/modem.b14",
+       "/system/firmware/image/modem.b18", "/system/usr/bin/adnsheloex",
+       "/system/usr/bin/adnshost", "/system/usr/bin/adnslogres",
+       "/system/usr/bin/adnsresfilter", "/system/usr/bin/cplay",
+       "/system/usr/bin/crecord", "/system/usr/bin/nettle-hash",
+       "/system/usr/bin/nettle-lfib-stream", "/system/usr/bin/nettle-pbkdf2",
+       "/system/usr/bin/pkcs1-conv", "/system/usr/bin/sexp-conv",
+       "/system/usr/lib/libtinycompress.so.0.0.0",
+       "/system/usr/sbin/tinyproxy");
+show_progress(0.800000, 0);
+ui_print("Patching system files...");
+apply_patch("/system/bin/busybox", "-",
+            7eafcb9cbe342b9bcb744fbde63e5d2a8194f9b4, 1267708,
+            f23a6eb344049f16533016544016b8b8c677f13b, package_extract_file("patch/system/bin/busybox.p"));
+set_progress(0.013868);
+apply_patch("/system/bin/su.shadow", "-",
+            e176e742c94aefc8e5f5992eaa525261d177451a, 47576,
+            825cf34853294b32a622af5c577f14347c71b10e, package_extract_file("patch/system/bin/su.shadow.p"));
+set_progress(0.014389);
+apply_patch("/system/data_swap/miniupnpd/miniupnpd.conf", "-",
+            c0dfcc354c14dfb202e4355f304f0de985b7ab9e, 4987,
+            054a6bb62216673850bc27bc6dc2a0be616e35c8, package_extract_file("patch/system/data_swap/miniupnpd/miniupnpd.conf.p"));
+set_progress(0.014443);
+apply_patch("/system/etc/init.d/misc-daemon", "-",
+            14481f3c106b60fec9ed482a28810c681f3284e0, 2097,
+            2bcf271616979e3cd5420d0afabc3136e2250fe4, package_extract_file("patch/system/etc/init.d/misc-daemon.p"));
+set_progress(0.014466);
+apply_patch("/system/etc/mdev/automountsdcard.sh", "-",
+            f04bcbdd919344040be6281c66509ec521e8e3ab, 2236,
+            08f33030891a8fce371f56249728d0c78baa3b85, package_extract_file("patch/system/etc/mdev/automountsdcard.sh.p"));
+set_progress(0.014491);
+apply_patch("/system/firmware/image/Ver_Info.txt", "-",
+            47f1a3aad135a817c65df49a2442aaaf947021a0, 749,
+            142620e52a698be0a8155ab0ef57cd8dd8a0a064, package_extract_file("patch/system/firmware/image/Ver_Info.txt.p"));
+set_progress(0.014499);
+apply_patch("/system/firmware/image/athwlan.bin", "-",
+            f18cc1870da834f63e6e9b35f46f58e0494566a5, 616352,
+            10dfc472f64829412e3b0b1c9dfc1b6aaa31adc8, package_extract_file("patch/system/firmware/image/athwlan.bin.p"));
+set_progress(0.021242);
+apply_patch("/system/firmware/image/mba.b01", "-",
+            60e012c01f216a8aa63dedc6c235a73c171e7146, 6664,
+            443fc901031f69cdeb3a94787a655c96a7055df5, package_extract_file("patch/system/firmware/image/mba.b01.p"));
+set_progress(0.021314);
+apply_patch("/system/firmware/image/mba.b04", "-",
+            6d582e815e5a499d7f5665ec2cee07e4cff77344, 35140,
+            91ec263ea35cc8f1e826f447bd2be91b98eed563, package_extract_file("patch/system/firmware/image/mba.b04.p"));
+set_progress(0.021699);
+apply_patch("/system/firmware/image/mba.mbn", "-",
+            e540ee0117ad9a4e6547457b620c333e4cf0005c, 238464,
+            b62951d1294cb7888d82a36f59b3b49b48b9832d, package_extract_file("patch/system/firmware/image/mba.mbn.p"));
+set_progress(0.024308);
+apply_patch("/system/firmware/image/mba.mdt", "-",
+            7cd076400263ae36d4c5c4bcc2cc0f3f7d77de54, 6940,
+            684301f6460c6218d10214d3c9869777c5bff1a4, package_extract_file("patch/system/firmware/image/mba.mdt.p"));
+set_progress(0.024383);
+apply_patch("/system/firmware/image/modem.b00", "-",
+            11cbb60f243d1abed750cff9f6bdddc326e6587a, 820,
+            bf7e557426546b85d6eb405bd157d7ca538fca6f, package_extract_file("patch/system/firmware/image/modem.b00.p"));
+set_progress(0.024392);
+apply_patch("/system/firmware/image/modem.b01", "-",
+            32641fdf53216bf116fc9bfcafb3647ba79de25f, 7208,
+            243a6ca6fc8931d8d14dea3de0c281a68fa989cf, package_extract_file("patch/system/firmware/image/modem.b01.p"));
+set_progress(0.024471);
+apply_patch("/system/firmware/image/modem.b03", "-",
+            6b77db9925a58cfb40d478cce1cf86379bf032ec, 4416,
+            45bbe4a31a4f5b9917fef6d2e11095c7ca92986d, package_extract_file("patch/system/firmware/image/modem.b03.p"));
+set_progress(0.024520);
+apply_patch("/system/firmware/image/modem.b06", "-",
+            6e58d8089c0e2296413f318f68d42910cd2a2f62, 403776,
+            33c9e109989a90cc1aa5768cd3305f4e8cea2f71, package_extract_file("patch/system/firmware/image/modem.b06.p"));
+set_progress(0.028937);
+apply_patch("/system/firmware/image/modem.b07", "-",
+            12807b1473e5ef47fdff255404e8cf0cb64e1ef9, 211268,
+            b442fa471451247126f5bddd4d38b3b841ab8adc, package_extract_file("patch/system/firmware/image/modem.b07.p"));
+set_progress(0.031248);
+apply_patch("/system/firmware/image/modem.b08", "-",
+            4ff2d1ec2b4e062173bbacd986842d5b3040176d, 734716,
+            314ac36e373d23e370e011adbfb513a5f73abdf9, package_extract_file("patch/system/firmware/image/modem.b08.p"));
+set_progress(0.039286);
+apply_patch("/system/firmware/image/modem.b09", "-",
+            18d45f9939149235878610c0ac2eb8e2ce2a011b, 1739108,
+            cb418e5bca027aa14b3f88e744f1759f30186a72, package_extract_file("patch/system/firmware/image/modem.b09.p"));
+set_progress(0.058311);
+apply_patch("/system/firmware/image/modem.b10", "-",
+            4ff5a8f04e2c4b4c7875d8cf2470f4aaa09e73cd, 19331856,
+            5edd44c45f1e170f0dd21cc798de0d8cc6a8813c, package_extract_file("patch/system/firmware/image/modem.b10.p"));
+set_progress(0.269794);
+apply_patch("/system/firmware/image/modem.b12", "-",
+            f10675fb1a0089fae36291f13402b7c29f130329, 6179679,
+            590cf6551c09fd6a7ef328abca443c97c20d4252, package_extract_file("patch/system/firmware/image/modem.b12.p"));
+set_progress(0.337398);
+apply_patch("/system/firmware/image/modem.b13", "-",
+            e3b5ecbf78eb6b3c04cb774c3892806daea9b586, 1786932,
+            d9baca2ba9d2fba454f1a1030473e6fd82367433, package_extract_file("patch/system/firmware/image/modem.b13.p"));
+set_progress(0.356946);
+apply_patch("/system/firmware/image/modem.b17", "-",
+            cf08a326a4fc97223feb7e9aab0dce4ac5d3cbeb, 82752,
+            d1c73779673fe350fc5e9865bd301d7b6a11b0d1, package_extract_file("patch/system/firmware/image/modem.b17.p"));
+set_progress(0.357851);
+apply_patch("/system/firmware/image/modem.b19", "-",
+            6044c01ce692d70e09180cad471bc9d329357799, 10493952,
+            934a4b54a3be3ad4ea968d2fd2394120ff1c5aeb, package_extract_file("patch/system/firmware/image/modem.b19.p"));
+set_progress(0.472651);
+apply_patch("/system/firmware/image/modem.b20", "-",
+            ca2ce02a09987b6d380e7abcbd21978f32694af8, 81920,
+            58b9cea9b6de19c55b3f5c2dfb20079ee68ae550, package_extract_file("patch/system/firmware/image/modem.b20.p"));
+set_progress(0.473548);
+apply_patch("/system/firmware/image/modem.b21", "-",
+            3cee26ddd14b2d74d58d90b138a85a2274131f53, 524288,
+            2846ed1cb88174926dd7b4fb62bbfbec26c8e233, package_extract_file("patch/system/firmware/image/modem.b21.p"));
+set_progress(0.479283);
+apply_patch("/system/firmware/image/modem.b22", "-",
+            954803b06719a45c87482f4bda99924e120a16fe, 656764,
+            e9c9fbaaea823554a860c41e482336b6f8a8e10d, package_extract_file("patch/system/firmware/image/modem.b22.p"));
+set_progress(0.486468);
+apply_patch("/system/firmware/image/modem.mdt", "-",
+            0687be6fccce738100e9c0f83d71700e4fce33b3, 8028,
+            2c399394c16985ef9db70a385d9d30eaa85b7bea, package_extract_file("patch/system/firmware/image/modem.mdt.p"));
+set_progress(0.486556);
+apply_patch("/system/firmware/image/qca61x4.bin", "-",
+            c334577266157f504ad38f4a6c9f25c9214268b1, 1071136,
+            74fbfaed1f0e5b241acaaa3d866c63107eed8c20, package_extract_file("patch/system/firmware/image/qca61x4.bin.p"));
+set_progress(0.498273);
+apply_patch("/system/firmware/image/qwlan.bin", "-",
+            f18cc1870da834f63e6e9b35f46f58e0494566a5, 616352,
+            10dfc472f64829412e3b0b1c9dfc1b6aaa31adc8, package_extract_file("patch/system/firmware/image/qwlan.bin.p"));
+set_progress(0.505016);
+apply_patch("/system/firmware/image/qwlan30.bin", "-",
+            f18cc1870da834f63e6e9b35f46f58e0494566a5, 616352,
+            10dfc472f64829412e3b0b1c9dfc1b6aaa31adc8, package_extract_file("patch/system/firmware/image/qwlan30.bin.p"));
+set_progress(0.511759);
+apply_patch("/system/firmware/image/utf.bin", "-",
+            43078066212de541d3c6dcbdf5a906f3d9a4dd94, 404488,
+            727bf587d9fc2bf8e52a45bba778aa80d2ad189a, package_extract_file("patch/system/firmware/image/utf.bin.p"));
+set_progress(0.516184);
+apply_patch("/system/firmware/image/utf30.bin", "-",
+            43078066212de541d3c6dcbdf5a906f3d9a4dd94, 404488,
+            727bf587d9fc2bf8e52a45bba778aa80d2ad189a, package_extract_file("patch/system/firmware/image/utf30.bin.p"));
+set_progress(0.520609);
+apply_patch("/system/lib/libavcodec.so.55.69.100", "-",
+            6717c13444a024ed8969691b4b564e3679529420, 1572748,
+            13e3d58142a030cdc53a866635fb3aaf7e346162, package_extract_file("patch/system/lib/libavcodec.so.55.69.100.p"));
+set_progress(0.537814);
+apply_patch("/system/lib/libavformat.so.55.48.100", "-",
+            79a9b0378a99d4b5c3cc4766b46468729eae7e7c, 606428,
+            bd14f7fb866f73a4219af18acd7a331e4ae982b4, package_extract_file("patch/system/lib/libavformat.so.55.48.100.p"));
+set_progress(0.544448);
+apply_patch("/system/lib/libavutil.so.52.92.100", "-",
+            5f7527b552444e988458e9dae9bd5974afb6fb1c, 178032,
+            2864a4239bc90bf8be98a9ace259c13ef545baa2, package_extract_file("patch/system/lib/libavutil.so.52.92.100.p"));
+set_progress(0.546396);
+apply_patch("/system/lib/libcrypto.so.1.0.0", "-",
+            6e69eac26a7baf142ee59bbbde7f4853fc12d37c, 1815680,
+            6795fd0c6b6b9976ab25854bd0d0a3de86c8f461, package_extract_file("patch/system/lib/libcrypto.so.1.0.0.p"));
+set_progress(0.566259);
+apply_patch("/system/lib/libnss_mdns.so.2", "-",
+            a54f737b998e4ef0d1a992f1e1731c674c33d519, 9684,
+            c32652ba3a1738bd8e81e29bdcab4db5fc766cd7, package_extract_file("patch/system/lib/libnss_mdns.so.2.p"));
+set_progress(0.566365);
+apply_patch("/system/lib/libnss_mdns4.so.2", "-",
+            90b7d5a69ecd13a39404b8a7285ad2366f5302b6, 9684,
+            be43cfb4bb9879127cc93dd25676a455354ba317, package_extract_file("patch/system/lib/libnss_mdns4.so.2.p"));
+set_progress(0.566470);
+apply_patch("/system/lib/libnss_mdns4_minimal.so.2", "-",
+            c0fc06044dc1c0f8b3c06f3eb3b63b18a6c223f6, 9684,
+            905d0c78d20193735344994bf31f80d86250c344, package_extract_file("patch/system/lib/libnss_mdns4_minimal.so.2.p"));
+set_progress(0.566576);
+apply_patch("/system/lib/libnss_mdns6.so.2", "-",
+            5583e1f4545a69181a08a2e21b8f5ac605313f20, 9684,
+            4954000f4ea9f6c999d68e6599b59ee36dc9d794, package_extract_file("patch/system/lib/libnss_mdns6.so.2.p"));
+set_progress(0.566682);
+apply_patch("/system/lib/libnss_mdns6_minimal.so.2", "-",
+            998753c7339ecae234134c517150526111cd40a9, 9684,
+            13db89ea6448f10a921c5bf4e4fc3ad4c9af21dc, package_extract_file("patch/system/lib/libnss_mdns6_minimal.so.2.p"));
+set_progress(0.566788);
+apply_patch("/system/lib/libnss_mdns_minimal.so.2", "-",
+            2e758309c0c61c45ed33b314cda8aeb7b79c4813, 9684,
+            148d8cce83465d2f7af09f551cfc422692ba84bc, package_extract_file("patch/system/lib/libnss_mdns_minimal.so.2.p"));
+set_progress(0.566894);
+apply_patch("/system/usr/bin/alsaucm_test", "-",
+            2897c37307fc8857988d1f219a3f585fb35f87bb, 22436,
+            50bc23d887aebaa9d4aadc6ba5a69cd224896164, package_extract_file("patch/system/usr/bin/alsaucm_test.p"));
+set_progress(0.567140);
+apply_patch("/system/usr/bin/atfwd_daemon", "-",
+            1c32381e64c869e07f024c0b3a47c4cd9937a15f, 606196,
+            b0dc6929e9a71ac3d9cffe0e2415aa39a0c720c3, package_extract_file("patch/system/usr/bin/atfwd_daemon.p"));
+set_progress(0.573771);
+apply_patch("/system/usr/bin/avahi-browse", "-",
+            4af80fe0c6fe4baaf1a99584f775ed4a1843ca10, 22200,
+            75b36cd916bf92ec464ca39adea0ab32f15c0dbe, package_extract_file("patch/system/usr/bin/avahi-browse.p"));
+set_progress(0.574014);
+apply_patch("/system/usr/bin/avahi-publish", "-",
+            cf842b65b6b9b9035e4496dc596a09ef2902f2f3, 18096,
+            0d2151bc62ce8f26a7761035c740d842afa6c3cc, package_extract_file("patch/system/usr/bin/avahi-publish.p"));
+set_progress(0.574212);
+apply_patch("/system/usr/bin/avahi-resolve", "-",
+            952f82c3402e05e332d924f9822ae93d4dfe0b42, 14000,
+            f0719d5c30ad06d8244e88406731ebdd1103db82, package_extract_file("patch/system/usr/bin/avahi-resolve.p"));
+set_progress(0.574365);
+apply_patch("/system/usr/bin/avahi-set-host-name", "-",
+            f5f7529f439f5bfb1753a9d36c63b6b8a8987ab3, 14000,
+            77dfc9dedb9dc0b74421150ff27048cb9484133b, package_extract_file("patch/system/usr/bin/avahi-set-host-name.p"));
+set_progress(0.574518);
+apply_patch("/system/usr/bin/bashbug", "-",
+            557883bf4018790edb23798891d3298cce71962b, 7626,
+            9fcd2c3cba91aab2bec7e6f20e2c60f9c70b8f39, package_extract_file("patch/system/usr/bin/bashbug.p"));
+set_progress(0.574602);
+apply_patch("/system/usr/bin/crasher", "-",
+            31e18c8428f3e26a448b2fc07c82e32b50236e6f, 9836,
+            52808f006d0fa61bc24fe25fa632a1ab7dc509cf, package_extract_file("patch/system/usr/bin/crasher.p"));
+set_progress(0.574709);
+apply_patch("/system/usr/bin/dbus-daemon", "-",
+            cab617c786799e02ebfc31c2edeb3abc52b9cb4d, 382876,
+            6a5afd6e14bdb688deb07e9f8bddd9c2da058d2a, package_extract_file("patch/system/usr/bin/dbus-daemon.p"));
+set_progress(0.578898);
+apply_patch("/system/usr/bin/dbus-run-session", "-",
+            34361f96506d60ae05bfd3e1bd94e2345fcebea3, 9836,
+            eccc24f243c1bc58b7aefadafc564e07f73be49d, package_extract_file("patch/system/usr/bin/dbus-run-session.p"));
+set_progress(0.579006);
+apply_patch("/system/usr/bin/dumpkeys", "-",
+            0d5f3e091d5665c1b62a05f6098b0c8b99d26ac3, 100240,
+            6fdeb7c3e8e08307436a935a9b1711ca1fbe2b54, package_extract_file("patch/system/usr/bin/dumpkeys.p"));
+set_progress(0.580102);
+apply_patch("/system/usr/bin/ffprobe", "-",
+            7ea3110b416092976a1afaa837b8006611077fab, 89968,
+            dc1677d1d45519848379b5dac1e4dbc5f713f045, package_extract_file("patch/system/usr/bin/ffprobe.p"));
+set_progress(0.581086);
+apply_patch("/system/usr/bin/groups.shadow", "-",
+            8bc8e69c1350c0b084c88fd96706eb2e1cb26acf, 9840,
+            af4792fb0ece31d83851f827ffefbd6513b8b696, package_extract_file("patch/system/usr/bin/groups.shadow.p"));
+set_progress(0.581194);
+apply_patch("/system/usr/bin/loadkeys", "-",
+            4eae26fd697916928a88f9ac16d2da9ef73e82c3, 137232,
+            552dc6ec88e00511faa35d70fff23285436292d3, package_extract_file("patch/system/usr/bin/loadkeys.p"));
+set_progress(0.582695);
+apply_patch("/system/usr/bin/mbimd", "-",
+            26f72e26f371a4ab42f28c858ac0553af474a8a3, 678164,
+            5d9be133ef99fe0abfa1f1f8eefbd80bb142b4a9, package_extract_file("patch/system/usr/bin/mbimd.p"));
+set_progress(0.590114);
+apply_patch("/system/usr/bin/mcm_ril_service", "-",
+            57ee1a43c2ef564bce9fe0fb443232d90737475b, 692288,
+            1e9bcb9812e7cb5331fb3ff3db07979360c134b3, package_extract_file("patch/system/usr/bin/mcm_ril_service.p"));
+set_progress(0.597687);
+apply_patch("/system/usr/bin/monitor_modem.sh", "-",
+            007b8e477989bfe3ed7678e2a37cdb12156648a5, 1587,
+            2bb2c2e3dd499c2a7d87e3b3798283fd5fe44725, package_extract_file("patch/system/usr/bin/monitor_modem.sh.p"));
+set_progress(0.597705);
+apply_patch("/system/usr/bin/netmgrd", "-",
+            3ee166916eb97d82ca026e0087455d2c10e0909f, 621324,
+            7b79af59c8aeea2f55fbe16418eb3079e20fad04, package_extract_file("patch/system/usr/bin/netmgrd.p"));
+set_progress(0.604502);
+apply_patch("/system/usr/bin/newgrp.shadow", "-",
+            d19a50a2ba5e58eca873206f45fc08e1829fa0d4, 26968,
+            d5b1ec572db8af8341a0b811c2f68d6a818f8f5c, package_extract_file("patch/system/usr/bin/newgrp.shadow.p"));
+set_progress(0.604797);
+apply_patch("/system/usr/bin/ql_fota_dl", "-",
+            4520ac99c4c038f9a875a8d32260dd2d3fa88bac, 30504,
+            56e3fb02cf9235d20a3ab0068f533dd0ebeb2e8b, package_extract_file("patch/system/usr/bin/ql_fota_dl.p"));
+set_progress(0.605131);
+apply_patch("/system/usr/bin/ql_manager_server", "-",
+            49b30eea7acedbc91012fd092c93378773141bd6, 219428,
+            58e3cd4fe9097c95d60ba93e705ac13fbc04397a, package_extract_file("patch/system/usr/bin/ql_manager_server.p"));
+set_progress(0.607531);
+apply_patch("/system/usr/bin/qmi_shutdown_modem", "-",
+            12b844ee41a548e417c8eed85785a1399ed2637e, 13940,
+            808f5a88ec7c42f7cfe6aa416994857499085360, package_extract_file("patch/system/usr/bin/qmi_shutdown_modem.p"));
+set_progress(0.607684);
+apply_patch("/system/usr/bin/qti", "-",
+            86f5cb9bd7c109176506e664e528a7db3ef2dd49, 159856,
+            1e78d23e70cd1f14d512406b6434069a07d06e02, package_extract_file("patch/system/usr/bin/qti.p"));
+set_progress(0.609432);
+apply_patch("/system/usr/bin/quectel-remotefs-service", "-",
+            f21fe8151b5256ddeaf0c1932a928a9920a50fa2, 22128,
+            cbbceb8eba8ca9a67229955cfb315bf5b23e66c4, package_extract_file("patch/system/usr/bin/quectel-remotefs-service.p"));
+set_progress(0.609674);
+apply_patch("/system/usr/bin/quectel-uart-ddp", "-",
+            a4287fa9068c0633de6ca572718112f6bffda4f0, 22304,
+            730108c53eb068b70a819d74108740cc367c31e3, package_extract_file("patch/system/usr/bin/quectel-uart-ddp.p"));
+set_progress(0.609918);
+apply_patch("/system/usr/bin/quectel_ble_service", "-",
+            0e07b3b2be82600e5a32f057c38416f68f25e3a7, 4205176,
+            5f2329237a5d6f7f7df6172872f4badea23fd9ce, package_extract_file("patch/system/usr/bin/quectel_ble_service.p"));
+set_progress(0.655922);
+apply_patch("/system/usr/bin/quectel_daemon", "-",
+            bab005c16ac3f5dd087bf0a9989cf8af7c3adabd, 71996,
+            a49c5d7282aad807af6faf2bdcaba4d4b3782c7e, package_extract_file("patch/system/usr/bin/quectel_daemon.p"));
+set_progress(0.656709);
+apply_patch("/system/usr/bin/test_binder", "-",
+            9efc49219d228bc538afa97893185a12b2f29245, 30428,
+            4abaadd81a7a6f80477cd4d23e189603ad9f25ed, package_extract_file("patch/system/usr/bin/test_binder.p"));
+set_progress(0.657042);
+apply_patch("/system/usr/bin/thermal-engine", "-",
+            fb4f23b43a9d1b04762b7b2270e7dea6b929882e, 250944,
+            15c0cbf20207b9c6f7967d0cbc7f4302500a4ec4, package_extract_file("patch/system/usr/bin/thermal-engine.p"));
+set_progress(0.659787);
+apply_patch("/system/usr/bin/unzip", "-",
+            ef02f1eb8d686c8f4c8d13939d7152fe277ced1b, 157408,
+            e29228fd1ec409eb4a7adac0b7532b24ed5c24c0, package_extract_file("patch/system/usr/bin/unzip.p"));
+set_progress(0.661509);
+apply_patch("/system/usr/bin/xmllint", "-",
+            7a0ba13591356715c2a62e1e0f5d691e516de4d1, 63480,
+            89b3468b74b18dab63f1b33ea62eec54fb3aafbd, package_extract_file("patch/system/usr/bin/xmllint.p"));
+set_progress(0.662204);
+apply_patch("/system/usr/bin/zipinfo", "-",
+            ef02f1eb8d686c8f4c8d13939d7152fe277ced1b, 157408,
+            e29228fd1ec409eb4a7adac0b7532b24ed5c24c0, package_extract_file("patch/system/usr/bin/zipinfo.p"));
+set_progress(0.663926);
+apply_patch("/system/usr/lib/audio_primary_default.so", "-",
+            b2c2f39e714fb52acf9ec3da4985a54d000dd781, 300168,
+            5a6358d9319d1139dcd60541df22487098040f6a, package_extract_file("patch/system/usr/lib/audio_primary_default.so.p"));
+set_progress(0.667209);
+apply_patch("/system/usr/lib/dbus/dbus-daemon-launch-helper", "-",
+            30a522fef91752eff10d384cf3c09668373f9a83, 268120,
+            e477c6ad74b3d1dd1f999d55ef1fd273076c2ecd, package_extract_file("patch/system/usr/lib/dbus/dbus-daemon-launch-helper.p"));
+set_progress(0.670143);
+apply_patch("/system/usr/lib/libacdbloader.so", "-",
+            f40204a62043e1390a9ee0e1f7174a0377ec0592, 105320,
+            f7105068029f2af7328814fbf6079f3697bd000a, package_extract_file("patch/system/usr/lib/libacdbloader.so.p"));
+set_progress(0.671295);
+apply_patch("/system/usr/lib/libasound.so.2.0.0", "-",
+            5254414006504117b6fde7ffd250f40964f67291, 883500,
+            3f53f60d428a3fb7636d6da11893e4ee207efa20, package_extract_file("patch/system/usr/lib/libasound.so.2.0.0.p"));
+set_progress(0.680960);
+apply_patch("/system/usr/lib/libavahi-client.so.3.2.9", "-",
+            0d613159e25aeff904d936bd59d6c874f0e3891b, 63108,
+            ebe16f8c2d2d57a3adbb3b698715f992a16633ae, package_extract_file("patch/system/usr/lib/libavahi-client.so.3.2.9.p"));
+set_progress(0.681650);
+apply_patch("/system/usr/lib/libavahi-common.so.3.5.3", "-",
+            ff835f218dd63264dbe6dd094fcc5cfd9b2677c1, 46864,
+            b28d48b35f4b82499d5eb790f5386793c2bfb0f3, package_extract_file("patch/system/usr/lib/libavahi-common.so.3.5.3.p"));
+set_progress(0.682163);
+apply_patch("/system/usr/lib/libavahi-core.so.7.0.2", "-",
+            72a89d6c9564608e7501d07f1d3ef65510fe2f0b, 218740,
+            8eee510ec71ba9f6ca84db77c60caf66d26c309e, package_extract_file("patch/system/usr/lib/libavahi-core.so.7.0.2.p"));
+set_progress(0.684556);
+apply_patch("/system/usr/lib/libavahi-glib.so.1.0.2", "-",
+            8e518a136163f7ff18899f39a165e0bfe09f7806, 13904,
+            063fbf0e271b96c88fc36a3a2dcc54853a782e5b, package_extract_file("patch/system/usr/lib/libavahi-glib.so.1.0.2.p"));
+set_progress(0.684708);
+apply_patch("/system/usr/lib/libbase.so.0.0.0", "-",
+            af1df7b6c24758e21143a72b54e42b6e3cbea470, 26284,
+            bb9ce12d01de71ec2a25076680b0460131601998, package_extract_file("patch/system/usr/lib/libbase.so.0.0.0.p"));
+set_progress(0.684995);
+apply_patch("/system/usr/lib/libcamera_metadata.so.0.0.0", "-",
+            01c6aaa92c5ea1a6fcb651b84ade77002966b9a7, 36464,
+            c9b3bf1741fd6eccb7005110fb440a7463af6612, package_extract_file("patch/system/usr/lib/libcamera_metadata.so.0.0.0.p"));
+set_progress(0.685394);
+apply_patch("/system/usr/lib/libcutils.so.0.0.0", "-",
+            9d44cbb7ccc122bc583b014ab179c984f270124b, 50848,
+            0a0a72b90021e867af31a78573dd97f8dcef5327, package_extract_file("patch/system/usr/lib/libcutils.so.0.0.0.p"));
+set_progress(0.685951);
+apply_patch("/system/usr/lib/libdaemon.so.0.5.0", "-",
+            ef981b3fc7a58a4e93ca55f9ef9e987bf0f4434e, 22004,
+            651f74a2e5ae9b2a0a9922ff8d8a350c891f3dd1, package_extract_file("patch/system/usr/lib/libdaemon.so.0.5.0.p"));
+set_progress(0.686191);
+apply_patch("/system/usr/lib/libdbus-1.so.3.8.13", "-",
+            b5d6bc935a0d2f4cff8383ca6af442585fecac97, 259744,
+            2ec75e818cfa68d736f3724484a75fd66e8cb25f, package_extract_file("patch/system/usr/lib/libdbus-1.so.3.8.13.p"));
+set_progress(0.689033);
+apply_patch("/system/usr/lib/libexpat.so.1.6.0", "-",
+            409df0c28f7cecc1f625a484294bc54bc086d2f5, 145012,
+            352d476401c0b5cc7ea9ed7936fef88f24488a47, package_extract_file("patch/system/usr/lib/libexpat.so.1.6.0.p"));
+set_progress(0.690619);
+apply_patch("/system/usr/lib/libext4_utils.so.0.0.0", "-",
+            42e9d7fcd8c4c1a2115fbfed86f69ef9bff53a5b, 75396,
+            1700f953c93d5409f0ac57fb2357038c5e975b1a, package_extract_file("patch/system/usr/lib/libext4_utils.so.0.0.0.p"));
+set_progress(0.691444);
+apply_patch("/system/usr/lib/libgio-2.0.so.0.4400.1", "-",
+            05b29a34c9e117348da51102c29b6c77dae0c5f7, 1378472,
+            6979d21e66150de0284d03d8daab4f180fb3302b, package_extract_file("patch/system/usr/lib/libgio-2.0.so.0.4400.1.p"));
+set_progress(0.706524);
+apply_patch("/system/usr/lib/libglib-2.0.so.0.4400.1", "-",
+            b4011a7673c516eb4e5f3646af70ad2d8bc7900b, 1202664,
+            9c2c60ec9f04d284d5cb9b27552d9986587fc852, package_extract_file("patch/system/usr/lib/libglib-2.0.so.0.4400.1.p"));
+set_progress(0.719681);
+apply_patch("/system/usr/lib/libgmp.so.10.2.0", "-",
+            5f4c14ea664d1e00fe02d917e1111d9e4af52abd, 464516,
+            7a23548e9d4bc56e25bd65a948cb47574b28f4ab, package_extract_file("patch/system/usr/lib/libgmp.so.10.2.0.p"));
+set_progress(0.724762);
+apply_patch("/system/usr/lib/libgnutls.so.28.41.9", "-",
+            59e0ac057dcebc6389e130fc19501f4476a98a6b, 1120912,
+            799c434b779fb2f16e44c3be5da1314f8bf72b03, package_extract_file("patch/system/usr/lib/libgnutls.so.28.41.9.p"));
+set_progress(0.737025);
+apply_patch("/system/usr/lib/libgobject-2.0.so.0.4400.1", "-",
+            a685eea5faedea44326d6668c12aaae22133bea2, 284488,
+            7f6d28c218eec9ef9425460202b1ad9ccc848687, package_extract_file("patch/system/usr/lib/libgobject-2.0.so.0.4400.1.p"));
+set_progress(0.740137);
+apply_patch("/system/usr/lib/libgthread-2.0.so.0.4400.1", "-",
+            4ce77dd510d14fcc113608078deec9813d9beb0a, 5588,
+            81adaf768d26d7fb68adeff447d04a721cd5ec4a, package_extract_file("patch/system/usr/lib/libgthread-2.0.so.0.4400.1.p"));
+set_progress(0.740198);
+apply_patch("/system/usr/lib/libhogweed.so.4.1", "-",
+            4a4b8acc108a52ddfd8b86ff72906bfbf22219f2, 185924,
+            eaa0465935ac1e2088596c55fd35c9a51067fbe3, package_extract_file("patch/system/usr/lib/libhogweed.so.4.1.p"));
+set_progress(0.742232);
+apply_patch("/system/usr/lib/libid3tag.so.0.3.0", "-",
+            f7672c49f0f70583fd78088aa4ef7ee56a667096, 95756,
+            69a68bcaf0d46c93a9d9795269e840dc1c0081da, package_extract_file("patch/system/usr/lib/libid3tag.so.0.3.0.p"));
+set_progress(0.743280);
+apply_patch("/system/usr/lib/libmincrypt.so.0.0.0", "-",
+            f8ea0fbb85ec228275abbad9ea65cfd1d04e2943, 34312,
+            bd784f2d97fcd9be8040632f524c762237b12fbb, package_extract_file("patch/system/usr/lib/libmincrypt.so.0.0.0.p"));
+set_progress(0.743655);
+apply_patch("/system/usr/lib/libnetfilter_conntrack.so.3.1.3", "-",
+            c76e9b16151f09bc4e29d85534d21b0e1ce84c61, 62688,
+            5f52e82d8c6da3d6975ab9a049d1b4476ba6c969, package_extract_file("patch/system/usr/lib/libnetfilter_conntrack.so.3.1.3.p"));
+set_progress(0.744341);
+apply_patch("/system/usr/lib/libnetmgr.so.0.0.0", "-",
+            76dc9a8d650ccc3eaa713561f99c6a52831bb530, 108048,
+            79781100e130f3ccc80c2ab42d211d48b82a5cdc, package_extract_file("patch/system/usr/lib/libnetmgr.so.0.0.0.p"));
+set_progress(0.745523);
+apply_patch("/system/usr/lib/libnettle.so.6.1", "-",
+            4182cac5165fbba790cdd4460a41937891273b45, 239272,
+            baac22a37c5bd167e7ba90976ddca4426397d5a9, package_extract_file("patch/system/usr/lib/libnettle.so.6.1.p"));
+set_progress(0.748140);
+apply_patch("/system/usr/lib/libnfnetlink.so.0.2.0", "-",
+            f4401e95f531f6fde5e1bb95b7b64bb75552a03a, 25664,
+            74ad3614775bd00e096ce069316a4af3a7e6019f, package_extract_file("patch/system/usr/lib/libnfnetlink.so.0.2.0.p"));
+set_progress(0.748421);
+apply_patch("/system/usr/lib/libnl-3.so.200.20.0", "-",
+            ce08cd7393a25f0afa1d5f3913c7ba9153868a89, 100032,
+            0a73420cfe35d0eaef891c0e70cdf92cda080996, package_extract_file("patch/system/usr/lib/libnl-3.so.200.20.0.p"));
+set_progress(0.749515);
+apply_patch("/system/usr/lib/libnl-genl-3.so.200.20.0", "-",
+            d2aea9d9406db8154ffb981fc4b9b05ac643ce31, 18332,
+            acbb5e7003851473fe3791619349051cfaaf9d16, package_extract_file("patch/system/usr/lib/libnl-genl-3.so.200.20.0.p"));
+set_progress(0.749716);
+apply_patch("/system/usr/lib/libnl-nf-3.so.200.20.0", "-",
+            ce51bd730554ba17d9f9df51a56e5264875f0215, 73164,
+            594a9069560fbf7fc9aa0261891c175d16695da1, package_extract_file("patch/system/usr/lib/libnl-nf-3.so.200.20.0.p"));
+set_progress(0.750516);
+apply_patch("/system/usr/lib/libnl-route-3.so.200.20.0", "-",
+            9cef1fa254daf68c581b4a655e564844b60d61aa, 319364,
+            edf01571d5189a257f0f4279d1866cc50b816ff3, package_extract_file("patch/system/usr/lib/libnl-route-3.so.200.20.0.p"));
+set_progress(0.754010);
+apply_patch("/system/usr/lib/libperl.so.5.22.0", "-",
+            8270213fa296b3a2509160780123aed6cf421647, 1676220,
+            036c7f37863f98619d058dec7c7b5c3a4876f9ba, package_extract_file("patch/system/usr/lib/libperl.so.5.22.0.p"));
+set_progress(0.772347);
+apply_patch("/system/usr/lib/libpugixml.so.1.0.0", "-",
+            9061b00a13b33035aaf10e758a8c78d4956ff08c, 157360,
+            46b02fd6cf8d8267b6ece3a3025875946e583e62, package_extract_file("patch/system/usr/lib/libpugixml.so.1.0.0.p"));
+set_progress(0.774069);
+apply_patch("/system/usr/lib/libqahw.so", "-",
+            44de82af59096985c823e7afb513f48a09ec8714, 46760,
+            c81aded2b58bdaa70c0269d3e0900dfd219ec03d, package_extract_file("patch/system/usr/lib/libqahw.so.p"));
+set_progress(0.774580);
+apply_patch("/system/usr/lib/libql_rawdata.so.1.0.0", "-",
+            79dab3cbe391931ee9373a6b76621d204cecae29, 9684,
+            efbd577184c8c51ce79e140515cf376712e81b1b, package_extract_file("patch/system/usr/lib/libql_rawdata.so.1.0.0.p"));
+set_progress(0.774686);
+apply_patch("/system/usr/lib/libqmiservices.so.1.0.0", "-",
+            f6bda6026d54cfe1657f73bdd09182d6bcb16464, 109776,
+            b567ff20abb54e5c260afccb36c292db997930ca, package_extract_file("patch/system/usr/lib/libqmiservices.so.1.0.0.p"));
+set_progress(0.775887);
+apply_patch("/system/usr/lib/libsensors.so.1.0.0", "-",
+            01c9b92a9d5f3d51932a03e6c98939e39b7d22ed, 84992,
+            6693f80f5a1b1b65b92ee2c07f2c25c7a54df3d6, package_extract_file("patch/system/usr/lib/libsensors.so.1.0.0.p"));
+set_progress(0.776817);
+apply_patch("/system/usr/lib/libsparse.so.0.0.0", "-",
+            8a59eb099a12ec3e40faa26785aaedb5d5a655a4, 26268,
+            24e3ca572d65d4e128233a457a9947c63ac69f7d, package_extract_file("patch/system/usr/lib/libsparse.so.0.0.0.p"));
+set_progress(0.777104);
+apply_patch("/system/usr/lib/libstdc++.so.6.0.20", "-",
+            1cbbd3ae592947907a6e700f931f5c6532b8d1d5, 890944,
+            03a58fbca29de6be5bbc7020632cdaf28028b3d6, package_extract_file("patch/system/usr/lib/libstdc++.so.6.0.20.p"));
+set_progress(0.786851);
+apply_patch("/system/usr/lib/libutils.so.0.0.0", "-",
+            8fd663b1d21a43e4c00ad490e1c5a641c13d3335, 83636,
+            9c370512377a5913349bc36d175860aab0189c86, package_extract_file("patch/system/usr/lib/libutils.so.0.0.0.p"));
+set_progress(0.787766);
+apply_patch("/system/usr/lib/libxml2.so.2.9.2", "-",
+            22da927366e0c5798685adb33d7bd3c8f400e2fa, 1503368,
+            6f3ba2f5874e0b71bb6ffffa6a0f1c90dc3526f2, package_extract_file("patch/system/usr/lib/libxml2.so.2.9.2.p"));
+set_progress(0.804212);
+apply_patch("/system/usr/lib/modules/3.18.44/extra/embms_kernel.ko",
+            "-", 825d8eeab8a1430eb7358eaa04e46f78f8f5212f, 10016,
+            c42df42c36f1a9610db801149af07ee51ad4e9a2, package_extract_file("patch/system/usr/lib/modules/3.18.44/extra/embms_kernel.ko.p"));
+set_progress(0.804322);
+apply_patch("/system/usr/lib/modules/3.18.44/extra/rtl8189es.ko",
+            "-", 40a560f44e6e6cc4b520d6cf6358cacd3f7999f1, 968212,
+            4a507f53454b82e501f10dc3b56cb327e834acb2, package_extract_file("patch/system/usr/lib/modules/3.18.44/extra/rtl8189es.ko.p"));
+set_progress(0.814914);
+apply_patch("/system/usr/lib/modules/3.18.44/extra/shortcut-fe-cm.ko",
+            "-", 5f7c9683c900d4f6ff5aa4673768a33b5a5231fb, 13992,
+            0937276a07068966d9616b6a839439316b91cdcc, package_extract_file("patch/system/usr/lib/modules/3.18.44/extra/shortcut-fe-cm.ko.p"));
+set_progress(0.815067);
+apply_patch("/system/usr/lib/modules/3.18.44/extra/shortcut-fe-ipv6.ko",
+            "-", 97e278ffef8125b1130ea51f54699549203be648, 53300,
+            a5298bd535091e84dd0d6aa5201a2944e35ecab0, package_extract_file("patch/system/usr/lib/modules/3.18.44/extra/shortcut-fe-ipv6.ko.p"));
+set_progress(0.815650);
+apply_patch("/system/usr/lib/modules/3.18.44/extra/shortcut-fe.ko",
+            "-", 881d4233b3d33df2117578221a4af5c2fe3e5629, 52660,
+            cb0c9e8d21097d5b9624cd1e970c7ab48e693f86, package_extract_file("patch/system/usr/lib/modules/3.18.44/extra/shortcut-fe.ko.p"));
+set_progress(0.816226);
+apply_patch("/system/usr/lib/modules/3.18.44/extra/wlan.ko", "-",
+            8c61d846164ab2d4971d7be6c530d4130519646f, 4243024,
+            3e8d6341af3dcc1b4301285cd1a0336407be4219, package_extract_file("patch/system/usr/lib/modules/3.18.44/extra/wlan.ko.p"));
+set_progress(0.862643);
+apply_patch("/system/usr/lib/modules/3.18.44/kernel/block/test-iosched.ko",
+            "-", 6b3ba87c443a2b6362b4727902dd782f4e81c016, 169692,
+            7dc11748d7ba9f0f4fc2bf474595d62c7fc68520, package_extract_file("patch/system/usr/lib/modules/3.18.44/kernel/block/test-iosched.ko.p"));
+set_progress(0.864499);
+apply_patch("/system/usr/lib/modules/3.18.44/kernel/crypto/ansi_cprng.ko",
+            "-", 6291826b163ca82a9afd9e97a1e25772a4b9bb46, 128028,
+            9ae490e06594717acceb02d989b1ee173518ec80, package_extract_file("patch/system/usr/lib/modules/3.18.44/kernel/crypto/ansi_cprng.ko.p"));
+set_progress(0.865900);
+apply_patch("/system/usr/lib/modules/3.18.44/kernel/drivers/input/misc/gpio_axis.ko",
+            "-", 2125c938a439df71365833a2aa363de62fd2a3c6, 111256,
+            13bcc36bb11e921561c3b4529911b2b8e2e4e09d, package_extract_file("patch/system/usr/lib/modules/3.18.44/kernel/drivers/input/misc/gpio_axis.ko.p"));
+set_progress(0.867117);
+apply_patch("/system/usr/lib/modules/3.18.44/kernel/drivers/input/misc/gpio_event.ko",
+            "-", 21c7aaea7b0f68e18fcc007d4171496e8e44d00e, 111480,
+            c562fcae321ddc0b1e6bd6b8a7dbaeee28f67b02, package_extract_file("patch/system/usr/lib/modules/3.18.44/kernel/drivers/input/misc/gpio_event.ko.p"));
+set_progress(0.868337);
+apply_patch("/system/usr/lib/modules/3.18.44/kernel/drivers/input/misc/gpio_input.ko",
+            "-", b2e4265b3061e5e16aef55e6710c7a1ee4b6912d, 118340,
+            a2b53606b8a6110d05a51fba03230ce735cf89c2, package_extract_file("patch/system/usr/lib/modules/3.18.44/kernel/drivers/input/misc/gpio_input.ko.p"));
+set_progress(0.869631);
+apply_patch("/system/usr/lib/modules/3.18.44/kernel/drivers/input/misc/gpio_matrix.ko",
+            "-", 2b5310bf8dacc3bd41dd58a49df373f2f5e01999, 120384,
+            5bb9da998b5479730ce4b04b01f5bb134c1b244d, package_extract_file("patch/system/usr/lib/modules/3.18.44/kernel/drivers/input/misc/gpio_matrix.ko.p"));
+set_progress(0.870948);
+apply_patch("/system/usr/lib/modules/3.18.44/kernel/drivers/input/misc/gpio_output.ko",
+            "-", 37255318b220155e21e9c6262d56be2b794e9f0c, 84508,
+            57e69d5415054c2c920221be3a86ba81c60e720b, package_extract_file("patch/system/usr/lib/modules/3.18.44/kernel/drivers/input/misc/gpio_output.ko.p"));
+set_progress(0.871873);
+apply_patch("/system/usr/lib/modules/3.18.44/kernel/drivers/mmc/card/mmc_block_test.ko",
+            "-", 5c09cb1bb289b6b5ebaf0186e47d7b96b5e67239, 232076,
+            1e243bf4b8475cf7561b0a7319e65b43c41e97ce, package_extract_file("patch/system/usr/lib/modules/3.18.44/kernel/drivers/mmc/card/mmc_block_test.ko.p"));
+set_progress(0.874411);
+apply_patch("/system/usr/lib/modules/3.18.44/kernel/drivers/mmc/card/mmc_test.ko",
+            "-", 10c866c3fac38c7957885098d239ba3f7720cc29, 224068,
+            ee512e584496345ed370e0a2fd3cd6d3e5f968f0, package_extract_file("patch/system/usr/lib/modules/3.18.44/kernel/drivers/mmc/card/mmc_test.ko.p"));
+set_progress(0.876863);
+apply_patch("/system/usr/lib/modules/3.18.44/kernel/drivers/net/ethernet/qualcomm/emac/qcom_emac.ko",
+            "-", d2388cfc3d15b2e39617894e45af1fa024551796, 1260880,
+            481e4372089ea9b64c04ae9487a49785ad9a80d9, package_extract_file("patch/system/usr/lib/modules/3.18.44/kernel/drivers/net/ethernet/qualcomm/emac/qcom_emac.ko.p"));
+set_progress(0.890656);
+apply_patch("/system/usr/lib/modules/3.18.44/kernel/drivers/net/nf_conntrack_rtsp.ko",
+            "-", 4178a6dc6b9170a9785ab361fdd3ad65ed86d5dc, 205904,
+            28b2a9738874470b5030bce874e19132dbccbfa4, package_extract_file("patch/system/usr/lib/modules/3.18.44/kernel/drivers/net/nf_conntrack_rtsp.ko.p"));
+set_progress(0.892909);
+apply_patch("/system/usr/lib/modules/3.18.44/kernel/drivers/net/nf_nat_rtsp.ko",
+            "-", 12cf4815f67f7500c27dbd45094ca35ff2db4642, 198072,
+            9ea7ae2323b7e76d107000767cfb18bdd39fc848, package_extract_file("patch/system/usr/lib/modules/3.18.44/kernel/drivers/net/nf_nat_rtsp.ko.p"));
+set_progress(0.895076);
+apply_patch("/system/usr/lib/modules/3.18.44/kernel/drivers/net/phy/at803x.ko",
+            "-", 41b2b266e0db9805fa806ffd418c840e81970387, 163884,
+            c8cff3716b2474e896a84287cc8723e8498894f5, package_extract_file("patch/system/usr/lib/modules/3.18.44/kernel/drivers/net/phy/at803x.ko.p"));
+set_progress(0.896868);
+apply_patch("/system/usr/lib/modules/3.18.44/kernel/drivers/net/phy/libphy.ko",
+            "-", 90ef1e00edfa5ddabbbb6f77b9d6babfc5a93f40, 511748,
+            835ebb14e9691649cf883f8dd9b9d70d66db531c, package_extract_file("patch/system/usr/lib/modules/3.18.44/kernel/drivers/net/phy/libphy.ko.p"));
+set_progress(0.902467);
+apply_patch("/system/usr/lib/modules/3.18.44/kernel/drivers/net/phy/qca8337.ko",
+            "-", c54d738cd837513269cac453aad515ac00ac0827, 170740,
+            5cc7479d24dc065de39b2415bf45aff9d1106314, package_extract_file("patch/system/usr/lib/modules/3.18.44/kernel/drivers/net/phy/qca8337.ko.p"));
+set_progress(0.904335);
+apply_patch("/system/usr/lib/modules/3.18.44/kernel/drivers/of/of_mdio.ko",
+            "-", e0fcd36ae899e84054d64eca5d1d818fa97917fc, 159476,
+            ce668468c99e709b207e69155b9ba52321769123, package_extract_file("patch/system/usr/lib/modules/3.18.44/kernel/drivers/of/of_mdio.ko.p"));
+set_progress(0.906079);
+apply_patch("/system/usr/lib/modules/3.18.44/kernel/drivers/quectel-drivers/ql_lpm/ql_lpm.ko",
+            "-", a18700dc6802a89ab4a57395fc2234f74147d2a3, 183132,
+            369a24e990d30c40ea2d901e63da3bc0a3f5296b, package_extract_file("patch/system/usr/lib/modules/3.18.44/kernel/drivers/quectel-drivers/ql_lpm/ql_lpm.ko.p"));
+set_progress(0.908083);
+apply_patch("/system/usr/lib/modules/3.18.44/kernel/drivers/spi/spidev.ko",
+            "-", a98c08f4ff4a5a977a1ac7f877fc9c4620e3e42b, 150980,
+            b9e944b71f92b1c4072927b8268898c52865b1c1, package_extract_file("patch/system/usr/lib/modules/3.18.44/kernel/drivers/spi/spidev.ko.p"));
+set_progress(0.909734);
+apply_patch("/system/usr/lib/modules/3.18.44/kernel/net/netfilter/xt_physdev.ko",
+            "-", 2fcc5bc8a1403a92954454dce34aad7c3124c202, 172044,
+            8acf53eb5e51433ffd8872c8c32050828894a29d, package_extract_file("patch/system/usr/lib/modules/3.18.44/kernel/net/netfilter/xt_physdev.ko.p"));
+set_progress(0.911616);
+apply_patch("/system/usr/lib/modules/3.18.44/modules.alias", "-",
+            c8a767bcb6a75a7adb9ad535dcde878263c5c48b, 2201,
+            91ee4eb3a82ff1596a4173b3443c7bb02cf35460, package_extract_file("patch/system/usr/lib/modules/3.18.44/modules.alias.p"));
+set_progress(0.911640);
+apply_patch("/system/usr/lib/modules/3.18.44/modules.alias.bin",
+            "-", 690746d58f8d8d170d7a8fc63b03590d1ba6add3, 2279,
+            f1d4a60b4557f5cefdba44448d7d109029f9b516, package_extract_file("patch/system/usr/lib/modules/3.18.44/modules.alias.bin.p"));
+set_progress(0.911665);
+apply_patch("/system/usr/lib/modules/3.18.44/modules.builtin", "-",
+            b05a3b41a5f2efc856d16c1c2583c8c0b20de01a, 12457,
+            47b5b0910f173b2fc55c8bb7fff8c90ec5057c53, package_extract_file("patch/system/usr/lib/modules/3.18.44/modules.builtin.p"));
+set_progress(0.911802);
+apply_patch("/system/usr/lib/modules/3.18.44/modules.builtin.bin",
+            "-", 092fe36749003be431b8e20283300d10e0dde9e2, 13342,
+            43b5e8a78b9a5925f4eb3b9268fef243f7132b07, package_extract_file("patch/system/usr/lib/modules/3.18.44/modules.builtin.bin.p"));
+set_progress(0.911948);
+apply_patch("/system/usr/lib/modules/3.18.44/modules.dep", "-",
+            6f3cc45052ac1f17c58ca75904f9ff16e707e6fb, 1209,
+            3805133493f547c71e86e5c486f4f6727ee8211e, package_extract_file("patch/system/usr/lib/modules/3.18.44/modules.dep.p"));
+set_progress(0.911961);
+apply_patch("/system/usr/lib/modules/3.18.44/modules.dep.bin", "-",
+            cf52fee2eaab87b9bfb7cbaf634cdb4cd7fe0831, 2144,
+            84dbb7416e58ddba7060771493ab14f97ad7cf05, package_extract_file("patch/system/usr/lib/modules/3.18.44/modules.dep.bin.p"));
+set_progress(0.911984);
+apply_patch("/system/usr/lib/modules/3.18.44/modules.order", "-",
+            459a1d4e5291d0a732d551297a1c31378e2025eb, 672,
+            9de43533770a2da8958c585bf477b765cd0d06cd, package_extract_file("patch/system/usr/lib/modules/3.18.44/modules.order.p"));
+set_progress(0.911992);
+apply_patch("/system/usr/lib/modules/3.18.44/modules.symbols.bin",
+            "-", 5fc4f2c4b418b64e8caa5c7802a6977bb02c4a9b, 5041,
+            69191ce335912b1249df08fd18d3755026cd34a0, package_extract_file("patch/system/usr/lib/modules/3.18.44/modules.symbols.bin.p"));
+set_progress(0.912047);
+apply_patch("/system/usr/mbn/NA/ATT/VoLTE/mcfg_sw.mbn", "-",
+            1bc9d4bdf023ba1ac2407ad3c82ab50138caf9bb, 36720,
+            7149e6df90bf64d50fa6ea41cf694ae9f2aa8482, package_extract_file("patch/system/usr/mbn/NA/ATT/VoLTE/mcfg_sw.mbn.p"));
+set_progress(0.912448);
+apply_patch("/system/usr/mbn/NA/TMO/Commercial_VoLTE/mcfg_sw.mbn",
+            "-", 639ac4be6a5c688596a0d03fcefed52d3a55c462, 37664,
+            5f2926bbacc922e0bce4d0a883a62b3371355b48, package_extract_file("patch/system/usr/mbn/NA/TMO/Commercial_VoLTE/mcfg_sw.mbn.p"));
+set_progress(0.912860);
+apply_patch("/system/usr/mbn/NA/Verizon/hVoLTE/mcfg_sw.mbn", "-",
+            5b27fc2dc4656e52adcb99c0cc522ec2bd761f24, 63488,
+            a665259c36e526ce032982adb90219edca7915c4, package_extract_file("patch/system/usr/mbn/NA/Verizon/hVoLTE/mcfg_sw.mbn.p"));
+set_progress(0.913555);
+apply_patch("/system/usr/mbn/common/ROW/Gen_3GPP/mcfg_sw.mbn", "-",
+            80a96c35a923c5fcfbc33a6c0aa0a5edc32f6555, 27416,
+            e89b8ab256216d08c65716652b3fb251b22b32d3, package_extract_file("patch/system/usr/mbn/common/ROW/Gen_3GPP/mcfg_sw.mbn.p"));
+set_progress(0.913855);
+apply_patch("/system/usr/sbin/avahi-autoipd", "-",
+            9c927fe6c48ce3b07e91b0572b3e44b98f2a4aa4, 34484,
+            6f515acaa9ecec72196dcac8457e0bfec92688c6, package_extract_file("patch/system/usr/sbin/avahi-autoipd.p"));
+set_progress(0.914232);
+apply_patch("/system/usr/sbin/avahi-daemon", "-",
+            f8d05603af1fcfa3c14f3af3ed93daf56c5d3101, 128884,
+            66e2ecf1c11a9b9160a26f4ff60b9599ac170bbd, package_extract_file("patch/system/usr/sbin/avahi-daemon.p"));
+set_progress(0.915642);
+apply_patch("/system/usr/sbin/avahi-dnsconfd", "-",
+            4fb10896c7d40e706c5ffc8d19f7bdb5089745e0, 18088,
+            66e572c57c03087b7d924395ebf324e489c9bdc6, package_extract_file("patch/system/usr/sbin/avahi-dnsconfd.p"));
+set_progress(0.915840);
+apply_patch("/system/usr/sbin/hostapd", "-",
+            8172d19a0450f66f3e939a2895a48adbc451ae4f, 707972,
+            94b3bd6fd43b140f6c03feb5df42f131a5cace94, package_extract_file("patch/system/usr/sbin/hostapd.p"));
+set_progress(0.923585);
+apply_patch("/system/usr/sbin/wpa_supplicant", "-",
+            ebb032f69bd4afa6f42bf92be0dd5bf190146a87, 1564100,
+            c96823bc2f2214f439d45fb2addb20ae5d95a6c0, package_extract_file("patch/system/usr/sbin/wpa_supplicant.p"));
+set_progress(0.940696);
+ui_print("Patching boot image...");
+apply_patch("MTD:boot:6219776:6d49ac82fac5c3f01c9b0205d8368b7139c5fd72:5421056:ebb3a35eb5c76da5b0ee3c1c288d8a2e95bf32c3",
+            "-", ebb3a35eb5c76da5b0ee3c1c288d8a2e95bf32c3, 5421056,
+            6d49ac82fac5c3f01c9b0205d8368b7139c5fd72, package_extract_file("patch/boot.img.p"));
+set_progress(1.000000);
+delete("/system/recovery-from-boot.p",
+       "/system/etc/install-recovery.sh");
+show_progress(0.100000, 10);
+ui_print("Unpacking new files...");
+package_extract_dir("system", "/system");
+ui_print("Unpacking new recovery...");
+package_extract_dir("recovery", "/system");
+ui_print("Symlinks and permissions...");
+delete("/system/etc/rc2.d/S99quectel_slic_daemon",
+       "/system/etc/rc3.d/S99quectel_slic_daemon",
+       "/system/etc/rc4.d/S99quectel_slic_daemon",
+       "/system/etc/rc5.d/S99quectel_slic_daemon",
+       "/system/etc/rc2.d/S99start_ql_filter",
+       "/system/etc/rc3.d/S99start_ql_filter",
+       "/system/etc/rc4.d/S99start_ql_filter",
+       "/system/etc/rc5.d/S99start_ql_filter", "/system/lib/libncurses.so.5",
+       "/system/usr/lib/libql_fota.so.0");
+symlink("../init.d/quectel_slic_daemon", "/system/etc/rc2.d/S99quectel_slic_daemon",
+        "/system/etc/rc3.d/S99quectel_slic_daemon",
+        "/system/etc/rc4.d/S99quectel_slic_daemon",
+        "/system/etc/rc5.d/S99quectel_slic_daemon");
+symlink("../init.d/start_ql_filter", "/system/etc/rc2.d/S99start_ql_filter",
+        "/system/etc/rc3.d/S99start_ql_filter",
+        "/system/etc/rc4.d/S99start_ql_filter",
+        "/system/etc/rc5.d/S99start_ql_filter");
+symlink("libncurses.so.5.9", "/system/lib/libncurses.so.5");
+symlink("libql_fota.so.0.0.0", "/system/usr/lib/libql_fota.so.0");
+set_perm(0, 0, 0755, "/system/usr/bin/mbimd");
+set_perm(0, 0, 0644, "/system/usr/lib/modules/3.18.44/kernel/drivers/net/nf_conntrack_rtsp.ko");
+set_perm(0, 0, 0755, "/system/usr/mbn/NA/TMO/Commercial_VoLTE/mcfg_sw.mbn");
+set_perm(0, 0, 0755, "/system/usr/bin/newgrp.shadow");
+set_perm(0, 0, 0755, "/system/usr/lib/libnetfilter_conntrack.so.3.1.3");
+set_perm(0, 0, 0755, "/system/usr/lib/libsensors.so.1.0.0");
+set_perm(0, 0, 0755, "/system/usr/bin/mcm_ril_service");
+set_perm(0, 0, 0755, "/system/usr/lib/libdbus-1.so.3.8.13");
+set_perm(0, 0, 0755, "/system/usr/lib/libacdbloader.so");
+set_perm(0, 0, 0755, "/system/usr/lib/libgmp.so.10.2.0");
+set_perm(0, 0, 0755, "/system/usr/lib/libcamera_metadata.so.0.0.0");
+set_perm(0, 0, 0755, "/system/usr/bin/avahi-resolve");
+set_perm(0, 0, 0755, "/system/usr/bin/zipinfo");
+set_perm(0, 0, 0755, "/system/usr/bin/groups.shadow");
+set_perm(0, 0, 0755, "/system/usr/lib/libgnutls.so.28.41.9");
+set_perm(0, 0, 0755, "/system/etc/init.d/quectel_slic_daemon");
+set_perm(0, 0, 0644, "/system/usr/lib/modules/3.18.44/kernel/drivers/net/phy/at803x.ko");
+set_perm(0, 0, 0644, "/system/usr/lib/libhogweed.so.4.1");
+set_perm(0, 0, 0755, "/system/usr/lib/libmincrypt.so.0.0.0");
+set_perm(0, 0, 0755, "/system/usr/lib/libqmiservices.so.1.0.0");
+set_perm(0, 0, 0644, "/system/etc/issue");
+set_perm(0, 0, 0755, "/system/usr/lib/libglib-2.0.so.0.4400.1");
+set_perm(0, 0, 0755, "/system/firmware/image/utf30.bin");
+set_perm(0, 0, 0755, "/system/usr/lib/libnetmgr.so.0.0.0");
+set_perm(0, 0, 0755, "/system/bin/su.shadow");
+set_perm(0, 0, 0644, "/system/etc/pimd.conf");
+set_perm(0, 0, 0755, "/system/usr/lib/libext4_utils.so.0.0.0");
+set_perm(0, 0, 0644, "/system/etc/quectel-project-subversion");
+set_perm(0, 0, 0755, "/system/lib/libavcodec.so.55.69.100");
+set_perm(0, 0, 0644, "/system/usr/lib/modules/3.18.44/kernel/drivers/net/phy/qca8337.ko");
+set_perm(0, 0, 0755, "/system/usr/sbin/avahi-dnsconfd");
+set_perm(0, 0, 0644, "/system/etc/quectel-project-version");
+set_perm(0, 0, 0755, "/system/usr/lib/dbus/dbus-daemon-launch-helper");
+set_perm(0, 0, 0644, "/system/etc/nsswitch.conf");
+set_perm(0, 0, 0755, "/system/usr/bin/ql_filter_set.sh");
+set_perm(0, 0, 0644, "/system/usr/lib/modules/3.18.44/extra/shortcut-fe-cm.ko");
+set_perm(0, 0, 0755, "/system/usr/bin/dnsmasqMonitor");
+set_perm(0, 0, 0755, "/system/firmware/image/qca61x4.bin");
+set_perm(0, 0, 0755, "/system/usr/bin/qti");
+set_perm(0, 0, 0755, "/system/usr/bin/ql_fota_dl");
+set_perm(0, 0, 0755, "/system/usr/sbin/iftop");
+set_perm(0, 0, 0644, "/system/usr/lib/modules/3.18.44/extra/shortcut-fe-ipv6.ko");
+set_perm(0, 0, 0755, "/system/usr/lib/libdaemon.so.0.5.0");
+set_perm(0, 0, 0755, "/system/etc/Handset_cal.acdb");
+set_perm(0, 0, 0644, "/system/usr/lib/modules/3.18.44/kernel/drivers/input/misc/gpio_event.ko");
+set_perm(0, 0, 0755, "/system/etc/qmi_ip_cfg.xml");
+set_perm(0, 0, 0644, "/system/usr/lib/modules/3.18.44/kernel/drivers/input/misc/gpio_matrix.ko");
+set_perm(0, 0, 0755, "/system/usr/lib/libxml2.so.2.9.2");
+set_perm(0, 0, 0755, "/system/usr/bin/unzip");
+set_perm(0, 0, 0755, "/system/usr/bin/ffprobe");
+set_perm(0, 0, 0755, "/system/usr/bin/crasher");
+set_perm(0, 0, 0644, "/system/usr/lib/modules/3.18.44/kernel/drivers/of/of_mdio.ko");
+set_perm(0, 0, 0644, "/system/usr/lib/modules/3.18.44/modules.symbols.bin");
+set_perm(0, 0, 0755, "/system/usr/bin/dbus-daemon");
+set_perm(0, 0, 0755, "/system/lib/libnss_mdns4.so.2");
+set_perm(0, 0, 0755, "/system/usr/lib/libqahw.so");
+set_perm(0, 0, 0644, "/system/build.prop");
+set_perm(0, 0, 0644, "/system/etc/sysctl.conf");
+set_perm(0, 0, 0755, "/system/usr/bin/atfwd_daemon");
+set_perm(0, 0, 0755, "/system/usr/bin/dumpkeys");
+set_perm(0, 0, 0755, "/system/usr/sbin/wpa_supplicant");
+set_perm(0, 0, 0755, "/system/usr/lib/libgobject-2.0.so.0.4400.1");
+set_perm(0, 0, 0644, "/system/etc/version");
+set_perm(0, 0, 0755, "/system/lib/libncurses.so.5.9");
+set_perm(0, 0, 0755, "/system/usr/bin/xmllint");
+set_perm(0, 0, 0755, "/system/usr/sbin/avahi-daemon");
+set_perm(0, 0, 0755, "/system/lib/libnss_mdns_minimal.so.2");
+set_perm(0, 0, 0755, "/system/usr/bin/avahi-set-host-name");
+set_perm(0, 0, 0644, "/system/firmware/image/modem.b20");
+set_perm(0, 0, 0644, "/system/usr/lib/modules/3.18.44/kernel/block/test-iosched.ko");
+set_perm(0, 0, 0755, "/system/etc/Headset_cal.acdb");
+set_perm(0, 0, 0644, "/system/usr/lib/modules/3.18.44/modules.dep.bin");
+set_perm(0, 0, 0755, "/system/usr/lib/libperl.so.5.22.0");
+set_perm(0, 0, 0755, "/system/lib/libnss_mdns6_minimal.so.2");
+set_perm(0, 0, 0755, "/system/usr/lib/libsparse.so.0.0.0");
+set_perm(0, 0, 0755, "/system/usr/bin/quectel-remotefs-service");
+set_perm(0, 0, 0755, "/system/lib/libcrypto.so.1.0.0");
+set_perm(0, 0, 0755, "/system/etc/General_cal.acdb");
+set_perm(0, 0, 0755, "/system/usr/sbin/hostapd");
+set_perm(0, 0, 0755, "/system/usr/mbn/common/ROW/Gen_3GPP/mcfg_sw.mbn");
+set_perm(0, 0, 0755, "/system/usr/bin/test_binder");
+set_perm(0, 0, 0755, "/system/usr/lib/libavahi-client.so.3.2.9");
+set_perm(0, 0, 0755, "/system/usr/fota_ip_a/mgmtree.tre");
+set_perm(0, 0, 0755, "/system/firmware/image/qwlan.bin");
+set_perm(0, 0, 0755, "/system/usr/bin/quectel_daemon");
+set_perm(0, 0, 0755, "/system/usr/bin/loadkeys");
+set_perm(0, 0, 0644, "/system/etc/issue.net");
+set_perm(0, 0, 0755, "/system/firmware/image/athwlan.bin");
+set_perm(0, 0, 0755, "/system/usr/bin/thermal-engine");
+set_perm(0, 0, 0755, "/system/bin/mountpoint.sysvinit");
+set_perm(0, 0, 0644, "/system/usr/lib/modules/3.18.44/kernel/drivers/quectel-drivers/ql_lpm/ql_lpm.ko");
+set_perm(0, 0, 0644, "/system/usr/lib/modules/3.18.44/modules.builtin");
+set_perm(0, 0, 0755, "/system/usr/lib/libavahi-common.so.3.5.3");
+set_perm(0, 0, 0644, "/system/usr/lib/modules/3.18.44/kernel/drivers/input/misc/gpio_output.ko");
+set_perm(0, 0, 0755, "/system/etc/Hdmi_cal.acdb");
+set_perm(0, 0, 0755, "/system/usr/bin/avahi-browse");
+set_perm(0, 0, 0644, "/system/firmware/image/mba.mbn");
+set_perm(0, 0, 0755, "/system/etc/Global_cal.acdb");
+set_perm(0, 0, 0755, "/system/usr/lib/libql_rawdata.so.1.0.0");
+set_perm(0, 0, 0644, "/system/usr/lib/modules/3.18.44/extra/rtl8189es.ko");
+set_perm(0, 0, 0755, "/system/usr/bin/quectel-uart-ddp");
+set_perm(0, 0, 0755, "/system/usr/lib/audio_primary_default.so");
+set_perm(0, 0, 0755, "/system/sbin/usb/compositions/9025");
+set_perm(0, 0, 0644, "/system/etc/inetd.conf");
+set_perm(0, 0, 0755, "/system/etc/init.d/find_partitions.sh");
+set_perm(0, 0, 0644, "/system/usr/lib/modules/3.18.44/modules.alias.bin");
+set_perm(0, 0, 0600, "/system/etc/shadow");
+set_perm(0, 0, 0644, "/system/usr/lib/modules/3.18.44/modules.dep");
+set_perm(0, 0, 0755, "/system/usr/lib/libavahi-core.so.7.0.2");
+set_perm(0, 0, 0755, "/system/firmware/image/bdwlan_fc21.md5");
+set_perm(0, 0, 0755, "/system/usr/sbin/avahi-autoipd");
+set_perm(0, 0, 0755, "/system/firmware/image/utf.bin");
+set_perm(0, 0, 0644, "/system/usr/lib/modules/3.18.44/kernel/crypto/ansi_cprng.ko");
+set_perm(0, 0, 0755, "/system/firmware/image/qwlan30.bin");
+set_perm(0, 0, 0755, "/system/usr/lib/libnfnetlink.so.0.2.0");
+set_perm(0, 0, 0755, "/system/bin/busybox");
+set_perm(0, 0, 0755, "/system/usr/lib/libpugixml.so.1.0.0");
+set_perm(0, 0, 0755, "/system/usr/bin/quectel_ble_service");
+set_perm(0, 0, 0755, "/system/usr/bin/quectel_slic_daemon");
+set_perm(0, 0, 0755, "/system/sbin/sys_reboot");
+set_perm(0, 0, 0755, "/system/lib/libnss_mdns.so.2");
+set_perm(0, 0, 0644, "/system/usr/lib/modules/3.18.44/extra/wlan.ko");
+set_perm(0, 0, 0755, "/system/usr/mbn/NA/ATT/VoLTE/mcfg_sw.mbn");
+set_perm(0, 0, 0644, "/system/usr/lib/modules/3.18.44/kernel/drivers/mmc/card/mmc_block_test.ko");
+set_perm(0, 0, 0755, "/system/lib/libavutil.so.52.92.100");
+set_perm(0, 0, 0755, "/system/usr/lib/libnl-nf-3.so.200.20.0");
+set_perm(0, 0, 0755, "/system/usr/bin/alsaucm_test");
+set_perm(0, 0, 0755, "/system/etc/init.d/start_ql_filter");
+set_perm(0, 0, 0644, "/system/etc/host.conf");
+set_perm(0, 0, 0644, "/system/usr/lib/modules/3.18.44/kernel/drivers/net/ethernet/qualcomm/emac/qcom_emac.ko");
+set_perm(0, 0, 0755, "/system/usr/lib/libgthread-2.0.so.0.4400.1");
+set_perm(0, 0, 0644, "/system/etc/syslog.conf.busybox");
+set_perm(0, 0, 0755, "/system/lib/libavformat.so.55.48.100");
+set_perm(0, 0, 0644, "/system/firmware/image/modem.mdt");
+set_perm(0, 0, 0644, "/system/usr/lib/modules/3.18.44/kernel/drivers/input/misc/gpio_input.ko");
+set_perm(0, 0, 0755, "/system/usr/lib/libcutils.so.0.0.0");
+set_perm(0, 0, 0755, "/system/usr/lib/libgio-2.0.so.0.4400.1");
+set_perm(0, 0, 0755, "/system/usr/lib/libasound.so.2.0.0");
+set_perm(0, 0, 0755, "/system/lib/libnss_mdns6.so.2");
+set_perm(0, 0, 0644, "/system/firmware/image/mba.mdt");
+set_perm(0, 0, 0755, "/system/usr/bin/qmi_shutdown_modem");
+set_perm(0, 0, 0755, "/system/usr/lib/libnl-3.so.200.20.0");
+set_perm(0, 0, 0644, "/system/firmware/image/modem.b22");
+set_perm(0, 0, 0644, "/system/firmware/image/modem.b21");
+set_perm(0, 0, 0644, "/system/etc/timestamp");
+set_perm(0, 0, 0644, "/system/usr/lib/modules/3.18.44/kernel/drivers/net/nf_nat_rtsp.ko");
+set_perm(0, 0, 0644, "/system/usr/lib/modules/3.18.44/kernel/net/netfilter/xt_physdev.ko");
+set_perm(0, 0, 0755, "/system/usr/lib/libutils.so.0.0.0");
+set_perm(0, 0, 0644, "/system/firmware/image/Ver_Info.txt");
+set_perm(0, 0, 0755, "/system/usr/bin/dbus-run-session");
+set_perm(0, 0, 0644, "/system/usr/lib/libnettle.so.6.1");
+set_perm(0, 0, 0644, "/system/etc/mdev.conf");
+set_perm(0, 0, 0644, "/system/firmware/image/mba.b04");
+set_perm(0, 0, 0644, "/system/firmware/image/mba.b01");
+set_perm(0, 0, 0644, "/system/usr/lib/modules/3.18.44/kernel/drivers/input/misc/gpio_axis.ko");
+set_perm(0, 0, 0644, "/system/usr/lib/modules/3.18.44/modules.order");
+set_perm(0, 0, 0755, "/system/usr/lib/libid3tag.so.0.3.0");
+set_perm(0, 0, 0755, "/system/usr/lib/libbase.so.0.0.0");
+set_perm(0, 0, 0755, "/system/usr/bin/monitor_modem.sh");
+set_perm(0, 0, 0755, "/system/sbin/powerapp");
+set_perm(0, 0, 0644, "/system/usr/lib/modules/3.18.44/kernel/drivers/spi/spidev.ko");
+set_perm(0, 0, 0755, "/system/usr/bin/bashbug");
+set_perm(0, 0, 0755, "/system/usr/bin/netmgrd");
+set_perm(0, 0, 0644, "/system/usr/lib/modules/3.18.44/extra/embms_kernel.ko");
+set_perm(0, 0, 0644, "/system/usr/lib/modules/3.18.44/modules.builtin.bin");
+set_perm(0, 0, 0755, "/system/usr/bin/avahi-publish");
+set_perm(0, 0, 0644, "/system/firmware/image/modem.b17");
+set_perm(0, 0, 0644, "/system/firmware/image/modem.b14");
+set_perm(0, 0, 0644, "/system/firmware/image/modem.b12");
+set_perm(0, 0, 0644, "/system/firmware/image/modem.b13");
+set_perm(0, 0, 0644, "/system/firmware/image/modem.b10");
+set_perm(0, 0, 0644, "/system/usr/lib/modules/3.18.44/modules.alias");
+set_perm(0, 0, 0644, "/system/usr/lib/modules/3.18.44/kernel/drivers/spi/le9641/spi-le9641.ko");
+set_perm(0, 0, 0755, "/system/usr/lib/libavahi-glib.so.1.0.2");
+set_perm(0, 0, 0755, "/system/lib/libnss_mdns4_minimal.so.2");
+set_perm(0, 0, 0644, "/system/firmware/image/modem.b18");
+set_perm(0, 0, 0644, "/system/firmware/image/modem.b19");
+set_perm(0, 0, 0755, "/system/usr/bin/ql_manager_server");
+set_perm(0, 0, 0755, "/system/usr/lib/libql_fota.so.0.0.0");
+set_perm_recursive(0, 0, 0755, 0755, "/system/usr/lib/modules/3.18.44/kernel/drivers/spi/le9641/");
+set_perm(0, 0, 0755, "/system/usr/lib/libstdc++.so.6.0.20");
+set_perm(0, 0, 0644, "/system/usr/lib/modules/3.18.44/extra/shortcut-fe.ko");
+set_perm(0, 0, 0644, "/system/etc/gps.conf");
+set_perm(0, 0, 0644, "/system/firmware/image/modem.b00");
+set_perm(0, 0, 0644, "/system/usr/lib/modules/3.18.44/kernel/drivers/mmc/card/mmc_test.ko");
+set_perm(0, 0, 0755, "/system/usr/lib/libnl-genl-3.so.200.20.0");
+set_perm(0, 0, 0644, "/system/usr/lib/modules/3.18.44/kernel/drivers/net/phy/libphy.ko");
+set_perm(0, 0, 0755, "/system/usr/lib/libexpat.so.1.6.0");
+set_perm(0, 0, 0755, "/system/firmware/image/bdwlan_fc21.bin");
+set_perm(0, 0, 0755, "/system/usr/lib/libnl-route-3.so.200.20.0");
+set_perm(0, 0, 0755, "/system/usr/mbn/NA/Verizon/hVoLTE/mcfg_sw.mbn");
+set_perm(0, 0, 0755, "/system/etc/init.d/misc-daemon");
+set_perm(0, 0, 0755, "/system/etc/mdev/automountsdcard.sh");
+set_perm(0, 0, 0644, "/system/firmware/image/modem.b09");
+set_perm(0, 0, 0644, "/system/firmware/image/modem.b08");
+set_perm(0, 0, 0644, "/system/firmware/image/modem.b01");
+set_perm(0, 0, 0755, "/system/sbin/sys_shutdown");
+set_perm(0, 0, 0644, "/system/firmware/image/modem.b03");
+set_perm(0, 0, 0644, "/system/data_swap/miniupnpd/miniupnpd.conf");
+set_perm(0, 0, 0644, "/system/firmware/image/modem.b07");
+set_perm(0, 0, 0644, "/system/firmware/image/modem.b06");
+ui_print("Patching remaining system files...");
+unmount("/system");

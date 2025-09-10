@@ -1,0 +1,648 @@
+Signature-Version: 1.0
+Created-By: 1.0 (Android SignApk)
+SHA1-Digest-Manifest: ot4BtEWU+0aPiE0NgwbKEzd2kI8=
+
+Name: patch/system/usr/lib/modules/3.18.44/kernel/drivers/net/phy/libp
+ hy.ko.p
+SHA1-Digest: ZaEA+/K3LnNvWZrafhjw0+fFf7A=
+
+Name: system/usr/fota_ip_a/mgmtree.tre
+SHA1-Digest: jSw/hLc7Ki3SlQeDGPcWZrTGWFM=
+
+Name: system/etc/General_cal.acdb
+SHA1-Digest: JoDA7/QcT/eTBYwGXbdBI2Tnzuo=
+
+Name: system/usr/lib/modules/3.18.44/kernel/drivers/spi/le9641/spi-le9
+ 641.ko
+SHA1-Digest: npq61GeRDFq+GZpyHAN0RJiOSfs=
+
+Name: patch/system/usr/lib/libnl-genl-3.so.200.20.0.p
+SHA1-Digest: UQ+3DRDkw6CgQ96YdhmRGFsDBQM=
+
+Name: patch/system/usr/sbin/avahi-autoipd.p
+SHA1-Digest: lt7mljDebzWZb2GDcDBmok/vtbM=
+
+Name: patch/system/firmware/image/Ver_Info.txt.p
+SHA1-Digest: UJAtKShRoqwhXWrV+NXWwQNk7jc=
+
+Name: patch/system/usr/bin/avahi-set-host-name.p
+SHA1-Digest: KfKWSdFJOJbgHHjIJ3YJNnk075s=
+
+Name: patch/system/usr/lib/modules/3.18.44/kernel/crypto/ansi_cprng.ko
+ .p
+SHA1-Digest: sMHNVelyp6ixcyfoFp3xw2lhbjc=
+
+Name: patch/system/usr/lib/libdbus-1.so.3.8.13.p
+SHA1-Digest: hVD9aMUmS3x7eU2oMJahaWqLuG4=
+
+Name: patch/system/usr/lib/modules/3.18.44/kernel/drivers/net/phy/at80
+ 3x.ko.p
+SHA1-Digest: /5155OddOfVxj+3NSzeeJw5aG70=
+
+Name: patch/system/usr/lib/modules/3.18.44/extra/wlan.ko.p
+SHA1-Digest: w7tYj6aG6ysomeUVG7xQWJPiZ0Y=
+
+Name: patch/system/etc/init.d/misc-daemon.p
+SHA1-Digest: lqJ/YnXG4dI6gj5IYUR4AUy0wNU=
+
+Name: patch/system/usr/lib/modules/3.18.44/modules.dep.p
+SHA1-Digest: 74VvfxdFzHn3SVEs2DSToqf+4ow=
+
+Name: patch/system/usr/bin/avahi-browse.p
+SHA1-Digest: WqU3ndvXRnSNJdKmo1ZxbcMfkd0=
+
+Name: system/etc/shadow
+SHA1-Digest: EtZTLRM51rNgh3wi82QxLEekjtc=
+
+Name: patch/system/usr/lib/libhogweed.so.4.1.p
+SHA1-Digest: YLLDPjDB76PfpGplPGswxYGZibY=
+
+Name: patch/system/usr/lib/modules/3.18.44/modules.builtin.bin.p
+SHA1-Digest: iEjk2Rh3i7UG0y4qKtTVx2i8wLs=
+
+Name: patch/system/usr/lib/modules/3.18.44/extra/embms_kernel.ko.p
+SHA1-Digest: SpFmcIrGG8CKI3Y/biT8lXRp5LY=
+
+Name: system/etc/timestamp
+SHA1-Digest: hV/IyYCi+N9HuFYEEHMkIujXHqk=
+
+Name: patch/system/firmware/image/modem.b19.p
+SHA1-Digest: IZn62tRLwSaGBPU57pZ3O7N0bp0=
+
+Name: patch/system/usr/lib/modules/3.18.44/extra/shortcut-fe-ipv6.ko.p
+SHA1-Digest: /kKtCE5hWpSMoWm2KzDsOE9FaVA=
+
+Name: patch/system/usr/bin/quectel_daemon.p
+SHA1-Digest: ToApuHQQEIvou0P8sLaeAkDNcEU=
+
+Name: patch/system/usr/mbn/NA/ATT/VoLTE/mcfg_sw.mbn.p
+SHA1-Digest: JdcAm8Kdyi5rZdaNsvw4PvDpNEU=
+
+Name: patch/system/firmware/image/modem.b03.p
+SHA1-Digest: XeY+l8Qsrh/LE0r+rpPbeie7yCo=
+
+Name: patch/system/firmware/image/qwlan.bin.p
+SHA1-Digest: fEXEeMbg5vP1APUJ8iUyiM/jqOE=
+
+Name: patch/system/usr/lib/libxml2.so.2.9.2.p
+SHA1-Digest: PXNFuEWviXU2ARn+0TMGddX2frc=
+
+Name: patch/system/usr/lib/libnl-nf-3.so.200.20.0.p
+SHA1-Digest: UwMOOc3b32Os5OrnQA40QCzZzJ8=
+
+Name: system/etc/qmi_ip_cfg.xml
+SHA1-Digest: NzEB05jo97ZdU2jeEP24jieOQFE=
+
+Name: patch/system/usr/bin/atfwd_daemon.p
+SHA1-Digest: xhfARzMmNid4bRKRvnClV+uxDLA=
+
+Name: patch/system/usr/lib/modules/3.18.44/kernel/drivers/input/misc/g
+ pio_axis.ko.p
+SHA1-Digest: i325qDZwnQGw6YezAjRHjcTUFS0=
+
+Name: patch/system/usr/lib/modules/3.18.44/kernel/block/test-iosched.k
+ o.p
+SHA1-Digest: KcYHeaZuFpEumcS20RS2ZT6kCww=
+
+Name: patch/system/data_swap/miniupnpd/miniupnpd.conf.p
+SHA1-Digest: Ys16iMG+RuzYuushZwGYk0HuoII=
+
+Name: patch/system/lib/libnss_mdns4.so.2.p
+SHA1-Digest: jupy3Yd/rs4gxbeTorwF1PjDr4o=
+
+Name: patch/system/firmware/image/athwlan.bin.p
+SHA1-Digest: WL0FXYWWe6gIZvZsiOy6PSqQrk4=
+
+Name: patch/system/usr/bin/loadkeys.p
+SHA1-Digest: 6jIjv0eEa+iPA9L8NrMQbXBgC+I=
+
+Name: patch/system/usr/sbin/hostapd.p
+SHA1-Digest: E3IOxKT1ff9JqCkmrCR9Dj98v9I=
+
+Name: patch/system/usr/lib/libavahi-core.so.7.0.2.p
+SHA1-Digest: XyBCfU6aw7byj5chUm+XEad09Jw=
+
+Name: patch/system/usr/lib/libnfnetlink.so.0.2.0.p
+SHA1-Digest: WYziKWYWtr22G5nBkuGPBZNp7ps=
+
+Name: patch/system/usr/lib/modules/3.18.44/kernel/net/netfilter/xt_phy
+ sdev.ko.p
+SHA1-Digest: ptXlH29vDwIjHUpQZ4PdxxsohUQ=
+
+Name: patch/system/firmware/image/modem.b13.p
+SHA1-Digest: prcdrTEDp2/4NnmHhcWNSjRCIqw=
+
+Name: patch/system/usr/sbin/wpa_supplicant.p
+SHA1-Digest: eXCYlcPWue0k0x743GSU7Zn2R08=
+
+Name: system/etc/init.d/start_ql_filter
+SHA1-Digest: xz2Km7cdefxndqDfu7xTxWKeGk8=
+
+Name: patch/system/lib/libnss_mdns4_minimal.so.2.p
+SHA1-Digest: 5oNl70lbpft3C1q/nP3SuNJdVVI=
+
+Name: patch/system/usr/lib/modules/3.18.44/extra/shortcut-fe.ko.p
+SHA1-Digest: InYW/IycanEwai8jRSEvGqIufHs=
+
+Name: patch/system/usr/lib/modules/3.18.44/modules.alias.bin.p
+SHA1-Digest: J57PzmbLpRjaTK/Z825vF55++t8=
+
+Name: patch/system/usr/lib/libnetmgr.so.0.0.0.p
+SHA1-Digest: ZX9WW9xf/5pOEQh4DxUZr6/GFK8=
+
+Name: patch/system/usr/lib/modules/3.18.44/kernel/drivers/net/phy/qca8
+ 337.ko.p
+SHA1-Digest: RwuOjh2EbAVGb6YknNWv1bbdr68=
+
+Name: patch/system/firmware/image/mba.mdt.p
+SHA1-Digest: 4eiqpK9G5GuQsdZ/EHaLdQeKHA4=
+
+Name: patch/system/usr/lib/libgio-2.0.so.0.4400.1.p
+SHA1-Digest: XOJ6vRwdUXhOBO0bLVYZvjYhfXk=
+
+Name: patch/system/usr/lib/modules/3.18.44/extra/shortcut-fe-cm.ko.p
+SHA1-Digest: eC/PY0QRRzjl//hjQFTvvl4nfC0=
+
+Name: patch/system/usr/lib/libasound.so.2.0.0.p
+SHA1-Digest: AuYLMmhIH3vbZMUWz6Ca7Z6Xw8w=
+
+Name: recovery/etc/install-recovery.sh
+SHA1-Digest: DRboIFlsuOMZP0e8WjFLadpN4QI=
+
+Name: patch/system/usr/lib/libstdc++.so.6.0.20.p
+SHA1-Digest: fQ4hJ7E0ku9hepyJn/oFK6/Lsn8=
+
+Name: system/etc/quectel-project-version
+SHA1-Digest: HhLXwT7l0PIfBflt1Bnk5aDWZ0c=
+
+Name: system/etc/pimd.conf
+SHA1-Digest: 8cvWHuua/Ry8tBWprRKUjo90bvs=
+
+Name: system/etc/issue.net
+SHA1-Digest: bC59LTK9MDgRMyTbf5epI+vTBT8=
+
+Name: patch/system/usr/lib/modules/3.18.44/kernel/drivers/mmc/card/mmc
+ _block_test.ko.p
+SHA1-Digest: lHkCSq+gJef3XqvH16U5Z4HDCxA=
+
+Name: patch/system/lib/libavutil.so.52.92.100.p
+SHA1-Digest: ssxj0H2/E4aVELhxPPqOKwO0YNo=
+
+Name: patch/system/usr/lib/libperl.so.5.22.0.p
+SHA1-Digest: PVFalzAfhRrUq0YedCsyyrff4sk=
+
+Name: patch/system/usr/lib/modules/3.18.44/kernel/drivers/spi/spidev.k
+ o.p
+SHA1-Digest: IGXRpB3DchoEKLMxmaZJZ7x1Qso=
+
+Name: patch/system/usr/lib/libnetfilter_conntrack.so.3.1.3.p
+SHA1-Digest: 9752z4+mcdpfjaZcu8Iugm2gjC8=
+
+Name: patch/system/firmware/image/modem.b09.p
+SHA1-Digest: sTREF7HNaBbhZ+RSNro6ohkdk0Y=
+
+Name: system/etc/gps.conf
+SHA1-Digest: O5ql1VLKHhYt83BLfmh+M5jSdoM=
+
+Name: patch/system/usr/lib/modules/3.18.44/kernel/drivers/mmc/card/mmc
+ _test.ko.p
+SHA1-Digest: mhEOfErfRpFflsM9tWjPZpVYc58=
+
+Name: patch/system/usr/lib/libql_rawdata.so.1.0.0.p
+SHA1-Digest: wU+IAId3SYrhaIbdh17IMZwd0Qc=
+
+Name: patch/system/usr/bin/newgrp.shadow.p
+SHA1-Digest: VGSCCvX3bqIk4RBSBnGKmhUjU8g=
+
+Name: patch/system/usr/lib/modules/3.18.44/extra/rtl8189es.ko.p
+SHA1-Digest: yR457dPeb7Yc6AxWSZE3wbQgo9o=
+
+Name: patch/system/bin/busybox.p
+SHA1-Digest: mrFrhP71nEAH1I2laZ4IXqkovIc=
+
+Name: patch/system/lib/libnss_mdns6_minimal.so.2.p
+SHA1-Digest: zKSYqW1EuHBAYfOtBDSP4nE+cNs=
+
+Name: patch/system/firmware/image/modem.b22.p
+SHA1-Digest: lr/w4lWBJVqQiwtcNz2pMFADmUg=
+
+Name: patch/system/usr/lib/modules/3.18.44/kernel/drivers/net/ethernet
+ /qualcomm/emac/qcom_emac.ko.p
+SHA1-Digest: 21cu4o4Zcym3AIhClMHiwHXQHx0=
+
+Name: patch/system/usr/bin/quectel-remotefs-service.p
+SHA1-Digest: WmV91L4Farv3HIs+K2R5UoytZFE=
+
+Name: patch/system/usr/lib/libnettle.so.6.1.p
+SHA1-Digest: RcVGpXs96xrqhO9jLDifotGF7zY=
+
+Name: system/etc/init.d/find_partitions.sh
+SHA1-Digest: wTfVeCbXtx30Qe3SDM8YNnFkDIc=
+
+Name: patch/system/usr/bin/netmgrd.p
+SHA1-Digest: 0gSnPLg3XtTpsqz3UpTdyQBZcQM=
+
+Name: quectel-project-version
+SHA1-Digest: bcQbliFOCEs2STqiWL8KBrXCIiw=
+
+Name: patch/system/usr/bin/xmllint.p
+SHA1-Digest: J69ZbODm/qSxNStbmcfXZN0w5Ko=
+
+Name: system/etc/version
+SHA1-Digest: l73FR2MJJvzzrzJCmRpxw6YZK3M=
+
+Name: system/etc/Headset_cal.acdb
+SHA1-Digest: hcq0B7p2Lh9vHf5/I5P2IwWXPDk=
+
+Name: patch/system/firmware/image/modem.mdt.p
+SHA1-Digest: Nz0JOYb3NZOmciBm7YiRCeeiv3Q=
+
+Name: patch/system/usr/bin/test_binder.p
+SHA1-Digest: 6T9oBbugy7Jxb2kS4N3RWHXXJe8=
+
+Name: patch/system/usr/mbn/NA/Verizon/hVoLTE/mcfg_sw.mbn.p
+SHA1-Digest: xVXuB4j5I50U6DhpiRbTidW6PLA=
+
+Name: recovery/recovery-from-boot.p
+SHA1-Digest: E1KKQaE7us+Xj13e6nynn5b3ek4=
+
+Name: patch/system/usr/bin/avahi-resolve.p
+SHA1-Digest: 3sFdJqgFTRj2FgtNUBpMjy7i9og=
+
+Name: patch/system/usr/lib/libgmp.so.10.2.0.p
+SHA1-Digest: vvXG/TmXhzmwd9z1WPt3YvrC9sk=
+
+Name: patch/system/usr/lib/modules/3.18.44/kernel/drivers/input/misc/g
+ pio_output.ko.p
+SHA1-Digest: 7JS6201jkgmrve4EuIdx9jetCdA=
+
+Name: system/firmware/image/bdwlan_fc21.md5
+SHA1-Digest: Ktp8JVTDqTgFwbaIFCuLCzQHKqQ=
+
+Name: system/etc/issue
+SHA1-Digest: MfEgRyYei9r0AhVmc+xrnGl/Jg4=
+
+Name: patch/system/usr/lib/modules/3.18.44/kernel/drivers/net/nf_nat_r
+ tsp.ko.p
+SHA1-Digest: XdWhTpYlyxlZhA1dYHQNfCnmtIU=
+
+Name: patch/system/usr/lib/libavahi-common.so.3.5.3.p
+SHA1-Digest: eI8VaJVuZzbZ3k+Zi/iDkGKxNtM=
+
+Name: META-INF/com/google/android/update-binary
+SHA1-Digest: awAoexfhdmAiliFyBm5He9VW+0c=
+
+Name: patch/system/usr/bin/alsaucm_test.p
+SHA1-Digest: QE8Gs12MajPsbmpxzTP+Es8yM9c=
+
+Name: system/bin/mountpoint.sysvinit
+SHA1-Digest: Ww5KHf9/gDi8JXEbqw981YsC834=
+
+Name: patch/system/usr/lib/libid3tag.so.0.3.0.p
+SHA1-Digest: a8uwusLq9bcwGUY9lc5sYX/kayI=
+
+Name: patch/system/firmware/image/modem.b20.p
+SHA1-Digest: o3ilXsBqDPuoVVVhlpKhb6baC9c=
+
+Name: patch/system/usr/bin/qmi_shutdown_modem.p
+SHA1-Digest: lgvXeTLGW4d1RXZNziqA2mT6uuM=
+
+Name: patch/system/firmware/image/mba.b04.p
+SHA1-Digest: hvV/3EDSuwSK7UfIoBYRNX0jbdE=
+
+Name: patch/system/usr/bin/qti.p
+SHA1-Digest: rSnvdf1M1F9BSH9u+QaQRZgrp3I=
+
+Name: patch/system/usr/bin/mbimd.p
+SHA1-Digest: AC21rMDtAakTk5x9g7lVGJ5RsHc=
+
+Name: patch/system/usr/mbn/common/ROW/Gen_3GPP/mcfg_sw.mbn.p
+SHA1-Digest: GKDJnaiQJPEh6+ew0U/mWDHZSWw=
+
+Name: patch/system/firmware/image/utf.bin.p
+SHA1-Digest: GytgCTvVKMQXR3CFqq4I/1YikV4=
+
+Name: patch/system/usr/bin/dumpkeys.p
+SHA1-Digest: PtTQ1WJLOxAA8FKDQKMd1rc0JYs=
+
+Name: META-INF/com/google/android/updater-script
+SHA1-Digest: B1wEvaac4swZG4SF+vmoL/pknrc=
+
+Name: patch/system/usr/lib/libnl-route-3.so.200.20.0.p
+SHA1-Digest: RyLxOIaOsk2oCG3i2kjAZIBeS6I=
+
+Name: system/sbin/powerapp
+SHA1-Digest: yIbLAtpPyLOKCnWLdVCgRDewOlo=
+
+Name: patch/system/usr/lib/modules/3.18.44/modules.builtin.p
+SHA1-Digest: nmfjO5T5DFaOGXMmCbQbP+Gxdp0=
+
+Name: patch/system/usr/lib/modules/3.18.44/modules.dep.bin.p
+SHA1-Digest: rPDIvUTXHl5qRllo5VHbqs4AXZA=
+
+Name: patch/system/usr/mbn/NA/TMO/Commercial_VoLTE/mcfg_sw.mbn.p
+SHA1-Digest: R1Y8Lw5pOV66jWCi9VfbKpLbnuM=
+
+Name: patch/system/firmware/image/mba.b01.p
+SHA1-Digest: RdXeT4zubUjxiB8un5vFXvHMFFA=
+
+Name: patch/system/usr/bin/ql_fota_dl.p
+SHA1-Digest: ZS3JdUOUdNnSX4ZC1ORDu4GiG8M=
+
+Name: patch/system/usr/lib/libbase.so.0.0.0.p
+SHA1-Digest: Gu66MyDSjQMVB2CTE5gLe8MuVGs=
+
+Name: patch/system/lib/libnss_mdns_minimal.so.2.p
+SHA1-Digest: 8WWZPu9VSYlQszNUuOF2qylVQPc=
+
+Name: patch/system/usr/bin/dbus-daemon.p
+SHA1-Digest: QS6H8Nw+VHqTZazlBi0Mhco8TQY=
+
+Name: patch/system/usr/lib/libmincrypt.so.0.0.0.p
+SHA1-Digest: VbriWFQNYi2Khz7M2GdISuOeNTE=
+
+Name: patch/system/firmware/image/modem.b08.p
+SHA1-Digest: Uie5/YxVGGsgW3t6dgP9uIBq89E=
+
+Name: patch/system/usr/lib/modules/3.18.44/modules.symbols.bin.p
+SHA1-Digest: lbKvFzP6zwQRVOLEjeFmEwWJlpM=
+
+Name: patch/system/usr/lib/modules/3.18.44/kernel/drivers/input/misc/g
+ pio_matrix.ko.p
+SHA1-Digest: dpJduH0SEpx9BrWlveuofMxXwTk=
+
+Name: patch/system/firmware/image/modem.b00.p
+SHA1-Digest: G017CtuOq09mxg6T/EnS8gjhwbs=
+
+Name: system/sbin/usb/compositions/9025
+SHA1-Digest: XTmhRU3S96KNeLmvLc6USiX9Iq8=
+
+Name: patch/system/usr/sbin/avahi-daemon.p
+SHA1-Digest: CfYNLKgJ4PWDj0XnQHFwx8komvc=
+
+Name: patch/system/firmware/image/modem.b01.p
+SHA1-Digest: fkg6MCFQpzcnCuXBWu/za0ucNWk=
+
+Name: patch/system/firmware/image/modem.b06.p
+SHA1-Digest: 7Oh6dpTZirSmJPZukbURVEjwTyo=
+
+Name: system/etc/Global_cal.acdb
+SHA1-Digest: nd1yGfE5KIgYENiHwl5u8NlYmmw=
+
+Name: patch/system/usr/lib/audio_primary_default.so.p
+SHA1-Digest: CkyNld7oYiKvmR3XA40kf3Sj6rc=
+
+Name: patch/system/usr/bin/groups.shadow.p
+SHA1-Digest: EI3suIA+s2kJOAB/isZ8GwKtDAc=
+
+Name: patch/system/etc/mdev/automountsdcard.sh.p
+SHA1-Digest: FWuHGlArRI4f/hog86LTRZqhrsQ=
+
+Name: patch/system/lib/libcrypto.so.1.0.0.p
+SHA1-Digest: MNhwl5nKxoOmNwYeDuN2Un/0UZY=
+
+Name: patch/system/usr/lib/libpugixml.so.1.0.0.p
+SHA1-Digest: 7GWbiplx/jZnpbOAliY41vQKt4M=
+
+Name: system/etc/syslog.conf.busybox
+SHA1-Digest: eAhIVzIISduVvXNzYcYk/JVUbv0=
+
+Name: patch/boot.img.p
+SHA1-Digest: IttC11/27T7wj+8w/fMx04ZP1zg=
+
+Name: patch/system/usr/lib/dbus/dbus-daemon-launch-helper.p
+SHA1-Digest: iGfAPATmD7CHfbA6e3XA5VQ3SQo=
+
+Name: patch/system/firmware/image/modem.b21.p
+SHA1-Digest: bXjmUJQsxUy2IotUWetEYQP1Mn0=
+
+Name: patch/system/usr/bin/avahi-publish.p
+SHA1-Digest: hU7r8FMN5B0M7HfckVIgDYNZdzU=
+
+Name: patch/system/firmware/image/mba.mbn.p
+SHA1-Digest: 1drfnjKgQbOdH91Dc0qUZTDTeHE=
+
+Name: patch/system/usr/lib/libcamera_metadata.so.0.0.0.p
+SHA1-Digest: SkoueFDG6mrPqQPYPP7qvzfueUo=
+
+Name: system/build.prop
+SHA1-Digest: SO5HRwyWHz6E04cYpLXVMYSFTaw=
+
+Name: system/firmware/image/bdwlan_fc21.bin
+SHA1-Digest: XVGZsDeRyZY3aan1Grk/ry2YBNY=
+
+Name: patch/system/usr/lib/modules/3.18.44/kernel/drivers/input/misc/g
+ pio_event.ko.p
+SHA1-Digest: Mt2PCTEPWSchgZLP9qQvQY8eEAI=
+
+Name: patch/system/usr/lib/modules/3.18.44/kernel/drivers/quectel-driv
+ ers/ql_lpm/ql_lpm.ko.p
+SHA1-Digest: OETIfIewzpS4a24DKdK54HVNyO4=
+
+Name: patch/system/usr/bin/ql_manager_server.p
+SHA1-Digest: J1V79WQ6oWqzUk9GZKLP/6MRm3I=
+
+Name: patch/system/firmware/image/qca61x4.bin.p
+SHA1-Digest: +jHlSrct1bZN34QQjKFjQbUl26E=
+
+Name: system/etc/init.d/quectel_slic_daemon
+SHA1-Digest: Ns7D5LHacaFJHJbcYMGyyLu8R7o=
+
+Name: system/usr/bin/quectel_slic_daemon
+SHA1-Digest: 6zobionwuA/ya+Lg8SqmK4IFCWM=
+
+Name: patch/system/usr/lib/libsensors.so.1.0.0.p
+SHA1-Digest: 26uKzzJy75/lUUZN8XaFk0bw/Yc=
+
+Name: patch/system/usr/lib/libdaemon.so.0.5.0.p
+SHA1-Digest: bpF7OclzU2TdwsbKo2yfIl9ULHk=
+
+Name: patch/system/usr/bin/crasher.p
+SHA1-Digest: 3XAV3wkAAnOIClSBBEFkU3cYKVg=
+
+Name: patch/system/usr/lib/modules/3.18.44/modules.alias.p
+SHA1-Digest: /8MIyalkg/HmkIrqV2oHzo/lzOo=
+
+Name: patch/system/usr/bin/thermal-engine.p
+SHA1-Digest: /+05EjoEMVmd5B0WzgRv4sEllPg=
+
+Name: META-INF/com/android/otacert
+SHA1-Digest: mLVZXdxp33Qa7I5au/eYcMGccYY=
+
+Name: META-INF/com/android/metadata
+SHA1-Digest: V99mThFp8psobtusVK2dBXwT1sU=
+
+Name: patch/system/usr/lib/libnl-3.so.200.20.0.p
+SHA1-Digest: fSqWjzQh97j5dGFoPUFHYJYIq8g=
+
+Name: system/etc/host.conf
+SHA1-Digest: q+A5STIzBLk2hqkQe6TysADR9UI=
+
+Name: patch/system/usr/lib/libqahw.so.p
+SHA1-Digest: dU4sVO0gVBurJ8i8ofQAFFIterE=
+
+Name: patch/system/bin/su.shadow.p
+SHA1-Digest: zftJkSf13XwJ2QVv2JVHRHQUz0E=
+
+Name: patch/system/usr/bin/monitor_modem.sh.p
+SHA1-Digest: FYFP67dt5JNeC1EZkuHFTMzFI78=
+
+Name: patch/system/usr/bin/quectel_ble_service.p
+SHA1-Digest: 8p5WVe8jJIvOmlk3U7Y25Q5bVk4=
+
+Name: patch/system/lib/libnss_mdns.so.2.p
+SHA1-Digest: xsAOvjiKUtoXZ0Nq1Jvsu7YFWmU=
+
+Name: patch/system/usr/bin/ffprobe.p
+SHA1-Digest: cIE1FGOOVyS8f0U5hScC0O/F2oo=
+
+Name: patch/system/usr/lib/libavahi-client.so.3.2.9.p
+SHA1-Digest: rRUyi0uFk5nb/RCF+j9gODcmCYw=
+
+Name: system/lib/libncurses.so.5.9
+SHA1-Digest: zP2mnyxAVRMtRMriAWhlYWyYwz8=
+
+Name: system/etc/inetd.conf
+SHA1-Digest: pgNfVdpa/IjSW0SLvXZERR0a+ps=
+
+Name: patch/system/usr/sbin/avahi-dnsconfd.p
+SHA1-Digest: yI1IGHqH8q75P9unTulz6vYqFJY=
+
+Name: patch/system/lib/libavformat.so.55.48.100.p
+SHA1-Digest: tIT6zB/lrjmIshIER2SOft+JcAc=
+
+Name: patch/system/usr/lib/libglib-2.0.so.0.4400.1.p
+SHA1-Digest: J2yygQ5Xuk/lUvR9ERVRy5Lh0i0=
+
+Name: patch/system/usr/lib/libgobject-2.0.so.0.4400.1.p
+SHA1-Digest: 3pId0OUJXlgYSIbRSUFzWfx2KgI=
+
+Name: patch/system/usr/lib/modules/3.18.44/modules.order.p
+SHA1-Digest: 0A2g2uYJE986t8CLv0+1AZYDd8U=
+
+Name: patch/system/usr/lib/libext4_utils.so.0.0.0.p
+SHA1-Digest: 0NslIv3m9KjIRrx4w2+LYLGqRpg=
+
+Name: system/etc/nsswitch.conf
+SHA1-Digest: O1lJsSmCYyB/FpHvf0zuMTSE86o=
+
+Name: patch/system/usr/lib/libsparse.so.0.0.0.p
+SHA1-Digest: 2RYuxS9+OctK09vRnir01eur3ls=
+
+Name: system/sbin/sys_shutdown
+SHA1-Digest: 0pSTv97btv2zszK2j5FIUuzivMc=
+
+Name: patch/system/usr/lib/libutils.so.0.0.0.p
+SHA1-Digest: mZGJ4f7v0cuNbl3zxfOTlOTb6EE=
+
+Name: patch/system/usr/bin/dbus-run-session.p
+SHA1-Digest: VH8uGDtaP791BN+rKUp8EzX5kTM=
+
+Name: system/usr/bin/ql_filter_set.sh
+SHA1-Digest: u+Byg7d1s2YNvthzE8lv3nRhoXI=
+
+Name: patch/system/usr/bin/mcm_ril_service.p
+SHA1-Digest: oqKvF0cyBauP87dcYeLzY6c7F80=
+
+Name: system/etc/Handset_cal.acdb
+SHA1-Digest: tSnIVaS7sJtV7y1/rGOgKZHuFyA=
+
+Name: patch/system/usr/lib/libacdbloader.so.p
+SHA1-Digest: CMQCC5JPHtCu9KjJ1xIMgio7qH4=
+
+Name: patch/system/usr/lib/libgnutls.so.28.41.9.p
+SHA1-Digest: 6dRHfUDIoVCYCBaMuZ1QdGqN1UQ=
+
+Name: patch/system/usr/lib/modules/3.18.44/kernel/drivers/net/nf_connt
+ rack_rtsp.ko.p
+SHA1-Digest: vvg6VFYZliIVpRbmhfTV0g+8V+w=
+
+Name: patch/system/firmware/image/modem.b07.p
+SHA1-Digest: B/QFOA/fdeudhcPQXET/r7sMaks=
+
+Name: system/usr/bin/dnsmasqMonitor
+SHA1-Digest: zU0niT6BhZSH7lItokpMWOAek68=
+
+Name: patch/system/firmware/image/qwlan30.bin.p
+SHA1-Digest: A+tCUGLj2h5iXtlTKq0IkchRm1Q=
+
+Name: patch/system/usr/lib/libqmiservices.so.1.0.0.p
+SHA1-Digest: vCngqChhcCR7vJy+33GwMyEpIjc=
+
+Name: system/etc/sysctl.conf
+SHA1-Digest: NzBA31NNHbaMzpdBVUwrK+iZA0Y=
+
+Name: patch/system/usr/lib/libcutils.so.0.0.0.p
+SHA1-Digest: DeoU7yVRmBnZsoRZWLKPl+3kMu4=
+
+Name: system/firmware/image/modem.b14
+SHA1-Digest: +0I9J+HURzw/jc+POQ8zUqXSpQo=
+
+Name: patch/system/usr/bin/quectel-uart-ddp.p
+SHA1-Digest: GGh1PDc8HmMBO1L0QLoNqm3M4Ns=
+
+Name: system/firmware/image/modem.b18
+SHA1-Digest: CiP4hIvgbwiQwsS2vvtZnCe2jOY=
+
+Name: patch/system/usr/lib/modules/3.18.44/kernel/drivers/of/of_mdio.k
+ o.p
+SHA1-Digest: 1QVb09cm631BHNO72ECO1owOjZI=
+
+Name: patch/system/usr/lib/modules/3.18.44/kernel/drivers/input/misc/g
+ pio_input.ko.p
+SHA1-Digest: irgvxSMmIoC02ZHqEAHrA2hvZnw=
+
+Name: patch/system/usr/bin/bashbug.p
+SHA1-Digest: eGtBW+gpM28hXeQUgYggRkJ78Jk=
+
+Name: patch/system/firmware/image/modem.b17.p
+SHA1-Digest: xd3yNlmLnl+zFN4y7k5EerqFPbE=
+
+Name: patch/system/usr/lib/libavahi-glib.so.1.0.2.p
+SHA1-Digest: +Y24RdU1+aWs81j01OZ9b0quylc=
+
+Name: patch/system/lib/libnss_mdns6.so.2.p
+SHA1-Digest: aRgCCcnaQwINrPV/CeusJxan6gA=
+
+Name: system/sbin/sys_reboot
+SHA1-Digest: uWnl/nLKwz2BgxlpqfndPD3iF8E=
+
+Name: patch/system/usr/lib/libgthread-2.0.so.0.4400.1.p
+SHA1-Digest: XyzO9Ai78L/487Zl7ww7g88nedk=
+
+Name: patch/system/firmware/image/utf30.bin.p
+SHA1-Digest: SpZ0HFksBp0tIVcwDGB5Yg92IMc=
+
+Name: system/usr/sbin/iftop
+SHA1-Digest: zL9qsRVmkVzBCSJfoMjoQ2jJ96c=
+
+Name: system/usr/lib/libql_fota.so.0.0.0
+SHA1-Digest: 43hMbdwhTJ9W/5hhn6p57+V6XYg=
+
+Name: patch/system/usr/bin/unzip.p
+SHA1-Digest: tNp2AjNQCF8ZFATbLZ4+7VvYkWk=
+
+Name: patch/system/lib/libavcodec.so.55.69.100.p
+SHA1-Digest: maVlNbnx4OUV/ABAKrTuwr50dcA=
+
+Name: patch/system/firmware/image/modem.b12.p
+SHA1-Digest: bG659XwyUdTc3YfgxFGKZDzf3WY=
+
+Name: patch/system/usr/lib/libexpat.so.1.6.0.p
+SHA1-Digest: 3sPKqSoOYOz+gKxgvc9j3ukqA7g=
+
+Name: system/etc/Hdmi_cal.acdb
+SHA1-Digest: gFh6Iei16YL/icqxf2bziTo90yE=
+
+Name: system/etc/mdev.conf
+SHA1-Digest: znaEizvfwsgkYS++kSj+QcjwoKk=
+
+Name: patch/system/usr/bin/zipinfo.p
+SHA1-Digest: rySygmziFtfOWtH9+mUrcbN5xzs=
+
+Name: system/etc/quectel-project-subversion
+SHA1-Digest: HofNYFLZOK20lMuABBZuwMtMDiw=
+
+Name: patch/system/firmware/image/modem.b10.p
+SHA1-Digest: vld9e3j69SlhKk3fZtNR2C31nBs=
+

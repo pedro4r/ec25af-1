@@ -1,0 +1,26 @@
+#! /bin/sh
+
+set -e
+
+case "$1" in
+start)
+    echo -n "Starting Quectel Filter: "
+    start-stop-daemon -S -b -a /usr/bin/ql_filter_set.sh
+    echo "done"
+    ;;
+  stop)
+    echo -n "Stopping Quectel Filter: "
+    start-stop-daemon -K -n /usr/bin/ql_filter_set.sh
+    echo "done"
+    ;;
+  restart)
+    $0 stop
+    $0 start
+    ;;
+  *)
+    echo "Usage security-auth{ start | stop | restart }" >&2
+    exit 1
+    ;;
+esac
+
+exit 0

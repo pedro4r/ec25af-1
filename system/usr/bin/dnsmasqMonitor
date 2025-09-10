@@ -1,0 +1,10 @@
+#!/bin/sh
+
+while : ; do
+
+    echo dnsmasq start > /dev/kmsg
+    dnsmasq -k $@
+    echo dnsmasq exit > /dev/kmsg
+    sleep 1
+ 
+done
